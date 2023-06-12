@@ -1,4 +1,4 @@
-package ch08_Loops;
+package ch08_Loops.L01_ForLoop;
 
 public class C01_forLoop {
     public static void main(String[] args) {
