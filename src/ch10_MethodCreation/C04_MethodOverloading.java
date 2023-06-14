@@ -40,29 +40,52 @@ public class C04_MethodOverloading {
 
 
     public static void main(String[] args) {
-
-String str = "tam oturmasi için birkaç örnek daha gerekir";
+        String str ="tam oturmasi icin birkac ornek daha gerekir";
 
         System.out.println("str.indexOf(\"o\") = " + str.indexOf("o"));
-        System.out.println("str.indexOf(25) = " + str.indexOf(25));
+
+        System.out.println("str.indexOf(25) = " + str.indexOf(5));
 
 
-        System.out.println("overloading");
-
+        System.out.println("overloading ");
         topla();
-        topla (1,5);
-        topla(1,2,4);
 
+        topla(1,5);
+
+        System.out.println("topla(1,2,4) = " + topla(1, 2, 4));
+
+        System.out.println("topla('a', 'b','c') = " + topla('a', 'b', 'c'));
+
+        System.out.println("topla(12,23.5) = " + topla(12, 23.5));
+
+        System.out.println("topla(\"A\" , \"B\") = " + topla("A", "B"));
 
 
     }
 
-    private static void topla() {
+    private static String topla(String a, String b) {
+        System.out.println("iki pm si String olan method calisti");
+        return a+b ;
+    }
+
+    private static double topla(int i, double v) {
+        System.out.println("1. pm int 2. pm double olan meth calisti");
+        return i + v ;
+    }
+
+    private static int topla(int i, int i1, int i2) {
+        System.out.println("3 pm si int olan meth calisti");
+        return  i + i1 + i2;
     }
 
     private static void topla(int i, int i1) {
+        System.out.println("iki pm si int olan meth calisti");
+        System.out.println(i+i1);
     }
 
-    private static void topla(int i, int i1, int i2) {
+    private static void topla() {
+        System.out.println("pm siz meth calisti");
+        System.out.println(35+85);
+
     }
 }
