@@ -17,7 +17,7 @@ public class Task02 {
 
         System.out.println("***** for döngüsü ile ******");
 
-        for (int i = num1; i <num2 ; i++) {
+        for (int i = Math.min(num1,num2); i <Math.max(num1,num2) ; i++) {
 
             System.out.println(i);
 
@@ -26,8 +26,8 @@ public class Task02 {
 
         System.out.println("****** While döngüsü ile *****");
 
-        int i = num1;
-        while (i < num2) {
+        int i = Math.min(num1, num2);
+        while (i < Math.max(num1, num2)) {
             System.out.println(i);
             i++;
 

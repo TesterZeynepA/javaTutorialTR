@@ -25,6 +25,18 @@ public class Task03 {
 		}
 
 
+		System.out.println("****** while ile çözüm *****");
+
+
+
+
+	int i =1;
+		while (i<=10){
+
+			System.out.println("(çarpım tablosu = " + (num + "x" + i + "=" + (num * i)));
+		    i++;
+
+		}
 
 
 

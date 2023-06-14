@@ -8,10 +8,19 @@ public class Task04 {
 
 		 */
 
-		
-		
+		int sayi = 999;
+		int count = 0;
 
-		
+		while (sayi >= 100) {
+			if (sayi % 4 == 0 && sayi % 6 == 0) {
+				System.out.println(sayi);
+				count++;
+			}
+			sayi--;
+		}
+
+		System.out.println(count + " tane sayı vardır");
+
 			
 	}
 
