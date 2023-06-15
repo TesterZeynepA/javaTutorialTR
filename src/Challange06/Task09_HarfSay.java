@@ -16,7 +16,27 @@ public class Task09_HarfSay {
      */
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir cümle giriniz");
+        String cümle = input.next();
+        System.out.println("Bir karakter giriniz");
+        char harf = input.next().charAt(0);
+
+        int harfSayisi = 0;
+        int index = 0;
+        int cumleUzunlugu = cümle.length();
+
+        while (index < cumleUzunlugu) {
+            if (cümle.charAt(index) == harf) {
+                harfSayisi++;
+            }
+
+            index++;
+        }
+
+        System.out.println(cümle + " cümlesinde " + harf + " harfi " + harfSayisi + " kere kullanılmış.");
     }
 
 
-}
+
+    }

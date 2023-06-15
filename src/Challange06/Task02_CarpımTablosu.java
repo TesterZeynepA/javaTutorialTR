@@ -14,6 +14,21 @@ public class Task02_CarpımTablosu {
     // Task-> Yukarıdaki çarpım tablosunu 10 a kadar print eden code create ediniz.
 
     public static void main(String[] args) {
+        int num =1;
+        int i =1;
+        while (i<=10){
+
+            System.out.println("(çarpım tablosu = " + (num + "x" + i + "=" + (num * i)));
+            i++;
+
+        }
+
+
+
+
+
+
+
 
     }
 }

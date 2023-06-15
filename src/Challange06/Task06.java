@@ -11,5 +11,28 @@ public class Task06 {
 
     public static void main(String[] args) {
 
+       Scanner input= new Scanner(System.in);
+        System.out.println("bir karakter giriniz");
+        char ch = input.next().charAt(0);
+        while (ch != 'x'){
+
+            System.out.println("Program çalışıyor");
+            ch = input.next().charAt(0);
+
+
+
+        }
+        System.out.println("Program bitti");
+
+
+
+
+
+
+
+
+
+
+
     }
 }

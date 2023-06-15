@@ -10,6 +10,32 @@ public class Task03_TekSayıAdedi {
    */
     public static void main(String[] args) {
 
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir sayı giriniz");
+
+        int sayi =input.nextInt();
+
+        int i = 1;
+        int tekSayiAdedi =0;
+
+        while (i<= sayi) {
+
+            if (i%2 ==1) {
+                tekSayiAdedi++;
+                System.out.print(i + " \n");
+
+            }
+
+
+            i++;
+
+        }
+        System.out.println("Tek sayı adedi :" + tekSayiAdedi);
+
+
+
+
     }
 
 }

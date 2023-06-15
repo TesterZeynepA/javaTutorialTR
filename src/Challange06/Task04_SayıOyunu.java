@@ -16,6 +16,33 @@ public class Task04_SayıOyunu {
 
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("sayi giriniz");
+        int sayi = input.nextInt();
+
+        int toplam=0;
+        int sayac=0;
+
+
+        while (true){
+            sayac++;
+            toplam+=sayi;
+            System.out.println("girilen sayıların toplamı :" +toplam);
+            if (toplam >100){
+                System.out.println(sayac + " kere sayı girdin. Bu kadar sayı yeter");
+                break;
+            }else
+
+            System.out.println("bir sayi giriniz");
+            sayi = input.nextInt();
+
+            System.out.println();
+        }
+
+
+
+
+
 
     }
 
