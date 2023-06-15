@@ -1,4 +1,4 @@
-package ch08_Loops.L03_DoWhileLoop.Tasks08_whileLoops;
+package task08_whileLoop;
 
 public class Task04 {
 
