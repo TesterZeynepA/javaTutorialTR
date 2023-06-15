@@ -29,9 +29,36 @@ public class Task08_AsalKontrol {
             } else {
                   System.out.println(sayi + " bir asal sayı değildir.");
 
+            }
+
+           //hocanın çözümü for ile
+
+            for (int i = 2; i <sayi; i++) {
+
+                  if (sayi%i==0){
+                        asalMi = false;
+                        break;
+                  }
+
+                  if (asalMi) {
+
+                        System.out.println("girilen sayi ASAL");
+
+                  }else {
+
+                        System.out.println(" girilen sayi asal değill");
+                  }
+
+
 
             }
+
+
+
+
       }
+
+
 
 
 

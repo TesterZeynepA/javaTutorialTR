@@ -22,7 +22,16 @@ public class Task02_CarpımTablosu {
             i++;
 
         }
+// hocanın çözümü
+        for (int kat = 1; kat <=10 ; kat++) {// outer lopp-> dış döngü-> kat tekrarı
+            for (int daire = 1; daire <=10 ; daire++) {// inner lopp->iç döngü-> daire tekrarı
+                System.out.println(kat+" x "+daire+" = "+(kat*daire));
+            }
+            System.out.println();
+        }
 
+
+        }
 
 
 
@@ -31,6 +40,6 @@ public class Task02_CarpımTablosu {
 
 
     }
-}
+
 
 

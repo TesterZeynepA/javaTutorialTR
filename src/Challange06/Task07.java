@@ -11,21 +11,16 @@ public class Task07 {
 
         Scanner input = new Scanner(System.in);
         System.out.println("String bir ifade giriniz");
-        String str = input.next();
+        String str = input.nextLine();
 
-        int index = 0;
-        int strUzunluk = str.length();
+        for (int i = 0; i < str.length(); i++) {
 
-        while (index < strUzunluk) {
-            char ch = str.charAt(index);
+            if (str.charAt(i)== 'a' || str.charAt(i)== ' '){
 
-            if (ch != ' ' && ch != 'a') {
-                System.out.println(ch);
+                continue;
+
             }
-
-            index++;
-
-
+            System.out.println(str.charAt(i));
         }
 
     }

@@ -18,7 +18,7 @@ public class Task09_HarfSay {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Bir cümle giriniz");
-        String cümle = input.next();
+        String cümle = input.nextLine();
         System.out.println("Bir karakter giriniz");
         char harf = input.next().charAt(0);
 
@@ -35,6 +35,24 @@ public class Task09_HarfSay {
         }
 
         System.out.println(cümle + " cümlesinde " + harf + " harfi " + harfSayisi + " kere kullanılmış.");
+
+
+        //hocanın for çözümü
+
+
+        for (int i = 0; i < cümle.length(); i++) {
+            if (cümle.charAt(i) == harf) {
+                harfSayisi++;
+
+
+            }
+
+
+
+        }
+        System.out.println(harf + "harfi adedi = " + harfSayisi);
+
+
     }
 
 
