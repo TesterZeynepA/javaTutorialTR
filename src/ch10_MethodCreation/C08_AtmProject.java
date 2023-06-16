@@ -16,7 +16,6 @@ public class C08_AtmProject {
         //basit bir atm projesi yazınız
         // switch case, method creation ve diger konuları kullanarak yazınız.
         sifreKontrol();
-
     }
 
     private static void sifreKontrol() {
@@ -41,14 +40,7 @@ public class C08_AtmProject {
                 }
             }
 
-
-
-
         }
-
-
-
-
 
     }
 
@@ -59,31 +51,56 @@ public class C08_AtmProject {
 
         switch (secim){
             case 1:
-               // bakiyeSorgula();
+               bakiyeSorgula();
                 anaMenu();
                 break;
             case 2:
-               // paraYatir();
+               paraYatir();
                 anaMenu();
                 break;
             case 3:
-               // paraCekme();
+               paraCekme();
                 anaMenu();
                 break;
             case 4:
-                cikis();
+                cikisYapma();
+                break;
             default:
                 System.out.println("hatali secim yaptiniz tekrar deneyin");
                 anaMenu();
                 break;
-
-
-
-
-
-
-
         }
 
+    }
+
+    private static void cikisYapma() {
+
+        System.out.println("Sistemden çıkıyorsunuz. Tekrar bekleriz.");
+    }
+
+    private static void paraCekme() {
+        System.out.println("ne kadar cekmek istersiniz");
+        double cekilecekMiktar = input.nextDouble();
+        if(cekilecekMiktar<= bakiye) {
+            bakiye -= cekilecekMiktar;
+            System.out.println("cekilen miktar = " + cekilecekMiktar);
+            System.out.println("kalan bakiyeniz = " + bakiye);
+
+        } else System.out.println("bakiyeniz yetersiz oldugu icin cekme isleminiz başarisiz bakiyeniz =" +bakiye);
+
+    }
+
+    private static void paraYatir() {
+
+        System.out.println("ne kadar yatirmak istersin");
+        double yatirilacakMiktar = input.nextInt();
+        bakiye +=yatirilacakMiktar;
+        System.out.println("güncel bakiyeniz: " + bakiye);
+
+    }
+
+    private static void bakiyeSorgula() {
+
+        System.out.println("bakiye = " + bakiye);
     }
 }

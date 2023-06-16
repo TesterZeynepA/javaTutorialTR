@@ -13,19 +13,14 @@ public class Task11 {
         int sayi=input.nextInt();
         int sayac=1,toplam=0;
         while (sayi != 0) {
-            sayac++;
+
             toplam+=sayi;
             System.out.println("Bir sayı giriniz: ");
             sayi = input.nextInt();
-
+            sayac++;
         }
         System.out.println("Girilen sayı adeti = " + sayac);
         System.out.println("Girilen sayıların toplamı = " + toplam);
-
-
-
-
-
 
 
     }

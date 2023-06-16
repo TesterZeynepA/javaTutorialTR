@@ -26,7 +26,7 @@ Bakıye (başlangıç bakıyesi 1000 tl) öğrenme, para yatırma ve cekme,
                 "para cekme icin 3\ncikis icin 4 tuslarina basiniz");
 
         int secim = input.nextInt();
-        //baslangi bakiyesi create edildi
+        //baslangic bakiyesi create edildi
         int bakiye = 1000;
         switch (secim) {
 
