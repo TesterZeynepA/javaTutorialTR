@@ -28,6 +28,8 @@ public class C08_AtmProject {
 
         while (count>0){ //
             if (sifre.equals(password)){
+
+                System.out.println("şifre girişi başarılı");
                 anaMenu();//şifre doğru ise ana menuye yönlendir
                 break;
             }else {
