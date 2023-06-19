@@ -3,6 +3,10 @@ package ch11_Debugger;
 public class C01_Debugger {
 
     /*
+Debug yapiyorsan, kodu anlamadin demektir.
+Debug yaparken kodu anlamiyorsan, nasil debug yapilir, onu anlamadin demektir.
+Debug yaparken kodu anladigini dusunuyorsan, aslinda debuga ihtiyacin olmadigini anladin demektir.
+Debug etmek kodun mental bir modelinin eksikligine isarettir...
 
 
 
