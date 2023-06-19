@@ -12,22 +12,27 @@ public class Task06_sayiBulmaca {
 
         Scanner input=new Scanner(System.in);
         System.out.print("1- 100 arasında bir sayı tahmin ediniz:  ");
-        int tahmin= input.nextInt();
 
-        int rastgele= (int) (Math.random()*100);// 0 <= olasılık <= 1(double deger aldığı için type casting yapıldı)
+        int rastgele= (int) (Math.random()*100+1);// 0 <= olasılık <= 1(double deger aldığı için type casting yapıldı)
+
+        // 1'den 100'e kadar random sayı böyle üretilir.
 
         System.out.println(rastgele);
-        int sayac=1;
+
+        int sayac=0;
+        int tahmin =0;
 
         while(rastgele!=tahmin){
             //System.out.println(rastgele<tahmin?"Daha küçük bir sayı giriniz":"Daha büyük bir sayı giriniz");
+            tahmin=input.nextInt();
+            sayac++;
+
             if (rastgele<tahmin) {
                 System.out.println("Daha küçük bir sayı giriniz");
             }else
                 System.out.println("Daha büyük bir sayı giriniz");
 
-            tahmin=input.nextInt();
-            sayac++;
+
         }
         System.out.println("Tebrikler " + sayac+" tahminde sayıyı buldunuz");
 
