@@ -31,6 +31,7 @@ public class Task07 {
    }
 
    public static int enKucukSayiBul(int sayi1, int sayi2, int sayi3) {
+
        int enKucuk = sayi1; // önce sayi1'i en küçük sayı olarak aldım
 
        // Diğer sayıları kontrol ederek en küçüğünü buluyoruz

@@ -119,5 +119,6 @@ public class Task16_KelimeOyunu02 {
         System.out.println("2. Oyuncunun Puanı : " + puan2);
         System.out.println();
 
+
     }
 }

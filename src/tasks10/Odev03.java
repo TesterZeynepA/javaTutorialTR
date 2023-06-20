@@ -36,6 +36,7 @@ public class Odev03 {
                 if (num%i ==0){
 
                     asal = false;
+
                     break;
 
                 }

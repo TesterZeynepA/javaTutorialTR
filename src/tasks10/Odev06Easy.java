@@ -38,6 +38,7 @@ public class Odev06Easy {
         Scanner input =new Scanner(System.in);
 
         System.out.println("Bir sayi giriniz :");
+
         int sayi = input.nextInt();
 
         powerOfThree(sayi);

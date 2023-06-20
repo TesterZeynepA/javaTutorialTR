@@ -26,6 +26,7 @@ public class Odev02 {
 	private static int rakamSay2(String s) {
 		int sayac =0;
 		for (int i = 0; i < s.length(); i++) {
+
 			if (String.valueOf(s.charAt(i)).matches("[0-9]")){// str. substring(i, i+1)
 				sayac++;
 

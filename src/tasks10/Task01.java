@@ -22,6 +22,7 @@ public class Task01 {
 
         System.out.println(isEqual ? "Sayilar birbirine eşit" : "Sayilar birbirine eşit değil");
         return isEqual;
+
     }
 
 

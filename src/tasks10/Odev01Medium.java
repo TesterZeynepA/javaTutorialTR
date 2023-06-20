@@ -19,6 +19,7 @@ public class Odev01Medium {
         Scanner input =new Scanner(System.in);
         System.out.println("Bir sayi giriniz:");
         int sayi =input.nextInt();
+
         System.out.println(randomNum(sayi));
 
 // ikinci yol
