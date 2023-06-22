@@ -8,6 +8,7 @@ public class Task09 {
     Saati saniyeye çeviren  method create ediniz
 
     Test Data:
+
     howManySeconds(2);
     Beklenen çıktı:
      7200

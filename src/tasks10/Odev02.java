@@ -16,7 +16,6 @@ public class Odev02 {
 		rakamSay (str);
 
 
-
 		rakamSay2(str);
 
 		System.out.println("girilen ifadede " +rakamSay2(str) + "sayisi kadar rakam vardır");

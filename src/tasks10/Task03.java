@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Task03 {
 	public static void main(String[] args) {
+
 		//task-> girilen Saati saniyeye mil'i km'ye kg'yi gr'a çeviren METHOD create ediniz.
 
 

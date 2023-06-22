@@ -44,6 +44,7 @@ public class Task14 {
 
     private static void getUser() {
         Scanner input = new Scanner(System.in);
+
         System.out.println("Saatlik çalışma ücretini giriniz: ");
         double birimUcret = input.nextDouble();
         System.out.println("İşe başlama saati: ");

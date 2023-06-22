@@ -17,6 +17,7 @@ public class Task11 {
     o -> 0
 
     Test data
+
     hackerDili("javayı severim")
     j4v4yı 53v3r1m
 

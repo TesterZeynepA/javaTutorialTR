@@ -25,6 +25,7 @@ public class Task07 {
        int sayi3 = input.nextInt();
 
        int enKucukSayi = enKucukSayiBul(sayi1, sayi2, sayi3);
+
        System.out.println("En küçük sayı: " + enKucukSayi);
 
 

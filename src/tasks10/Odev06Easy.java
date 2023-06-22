@@ -43,6 +43,7 @@ public class Odev06Easy {
 
         powerOfThree(sayi);
 
+
         System.out.println((powerOfThree(sayi) ? sayi + " sayisi, 3'ün kuvvetidir." : sayi + " sayisi 3'ün kuvveti değildir"));
 
 

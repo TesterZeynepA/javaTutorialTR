@@ -3,6 +3,7 @@ package tasks10;
 import java.util.Scanner;
 
 public class Task16_KelimeOyunu02 {
+
     static Scanner scan = new Scanner(System.in);
     static String strEk;
     static String str = "";

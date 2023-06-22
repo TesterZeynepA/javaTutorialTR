@@ -16,6 +16,7 @@ public class Task16_KelimeOyunu01 {
     public static void main(String[] args) {
 
         /* Iki kisinin oynayacagi bir kelime oyunu uretelim
+
          * Kurallar
          * 1- Baslangicta 1.oyuncudan bir kelime girmesini isteyin ve kelimeyi yazdirin
          *

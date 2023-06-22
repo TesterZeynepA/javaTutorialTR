@@ -12,6 +12,7 @@ public class Task02 {
 
         System.out.print("Lütfen Soyadınızı giriniz : ");
         soyAd = input.nextLine();
+
         isimYaz();
 
 

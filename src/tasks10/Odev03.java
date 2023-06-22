@@ -45,6 +45,7 @@ public class Odev03 {
 
         }else {
             System.out.println("Sayi sifirdan büyük olmali");
+
             asal = false;
         }
 

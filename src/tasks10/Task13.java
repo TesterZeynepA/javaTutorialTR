@@ -37,6 +37,7 @@ public class Task13 {
     }
 
     private static boolean controlThem(String str1, String str2) {
+
         return str1.substring(str1.length()-str2.length()).equals(str2);
 
 

@@ -3,6 +3,7 @@ package tasks10;
 import java.util.Scanner;
 
 public class Task15_UcusProject02 {
+
     static Scanner scan = new Scanner(System.in);
     static double ucret;
     static double yasKatsayi;

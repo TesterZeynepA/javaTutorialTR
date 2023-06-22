@@ -12,6 +12,7 @@ public class Task08 {
     Task-> girilen bir yılın  artık yıl olmasını kontrol eden METHOD create ediniz
 
    input: 2023
+
    output:false
     */
         Scanner sc = new Scanner(System.in);

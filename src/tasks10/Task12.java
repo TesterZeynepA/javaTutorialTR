@@ -16,6 +16,7 @@ public class Task12 {
     * Bir mail adresinde @ karakterinden önce en az bir karakter yazılmalı (a@gmail.com gibi)
 
     Örnekler
+
     validateEmail("@gmail.com")
     Çıktı : false
 

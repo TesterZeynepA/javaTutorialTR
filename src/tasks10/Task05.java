@@ -38,6 +38,7 @@ public class Task05 {
             case '/':
                 bol(s1, s2);
             case '*':carp(s1, s2);
+
             default: {
                 System.out.println("yanlış işlem girişi, please repeat");
 

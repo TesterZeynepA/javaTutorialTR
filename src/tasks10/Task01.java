@@ -18,6 +18,7 @@ public class Task01 {
     }//main sonu
 
     private static boolean esitMi(int x, int y) {
+
         boolean isEqual = (x == y);
 
         System.out.println(isEqual ? "Sayilar birbirine eşit" : "Sayilar birbirine eşit değil");

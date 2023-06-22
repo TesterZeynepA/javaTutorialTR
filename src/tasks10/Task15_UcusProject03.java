@@ -3,6 +3,7 @@ package tasks10;
 import java.util.Scanner;
 
 public class Task15_UcusProject03 {
+
     static Scanner scan = new Scanner(System.in);
     static double fiyatB = 500*0.1;
     static double fiyatC = 700*0.1;
