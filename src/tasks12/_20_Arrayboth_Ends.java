@@ -15,5 +15,17 @@ public class _20_Arrayboth_Ends {
         //Kodu aşağıya yazınız..
 
 
+        int [] ilkArr= {1,2,3,4};
+        int[] newArr= new int[2];
+
+        newArr[0]=ilkArr[0];
+
+
+
+
+
+
+
+
     }
 }

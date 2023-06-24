@@ -13,26 +13,17 @@ public class _11_Average_of_Array {
 
         int [] arr = {12,14,21,23,10,4};
 
-        arrayOrtalama(arr);
-
-
-    }
-
-    private static void arrayOrtalama(int [] arr) {
-
         int toplam =0;
-        int ortalama= toplam/(arr.length);
 
         for (int i = 0; i < arr.length; i++) {
 
             toplam += arr[i];
 
-
         }
 
+        double ortalama = (double) toplam/ arr.length;
 
-
-
+        System.out.println("ortalama = " + ortalama);
 
 
     }

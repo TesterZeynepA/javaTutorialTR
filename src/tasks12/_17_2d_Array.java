@@ -13,6 +13,20 @@ public class _17_2d_Array {
         //Kodu aşağıya yazınız.
 
 
+        int[][] multiArr = {{5, 2, 1}, {10, 2, 3, 6}, {1, 2}};//  3*4
+
+        int toplam = 0;
+
+        for (int i = 0; i < multiArr.length; i++) {
+
+            for (int j = 0; j < multiArr[i].length; j++) {
+
+                toplam+=multiArr[i][j];
+            }
+        }
+        System.out.println("toplam = " + toplam);
+
+
 
 
     }
