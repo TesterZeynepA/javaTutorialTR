@@ -12,6 +12,11 @@ public class Task01 {
 
         int arr[] = {2,6,4,5,8,9};
 
+        for (int i = 0; i < arr.length; i++) {
+            int karesi = arr[i] * arr[i];
+            System.out.println(karesi);
+        }
+
 
     }
 }

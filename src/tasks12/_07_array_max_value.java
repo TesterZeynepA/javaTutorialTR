@@ -12,6 +12,20 @@ public class _07_array_max_value {
         // code start here
 
 
+        int [] arr = {12, 2, 5, 15, 8};
+
+        int enBuyuk = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i]>enBuyuk) {
+
+                enBuyuk=arr[i];
+            }
+
+        }
+        System.out.println("Array deki en büyük değer = " + enBuyuk);
+
     }
 }
 

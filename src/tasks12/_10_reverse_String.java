@@ -10,5 +10,12 @@ public class _10_reverse_String {
         Cevap böyle olmalı :  "dlroW olleH"
          */
 
+        String [] arr = {"Hello World"};
+
+
+
+
+
+
     }
 }

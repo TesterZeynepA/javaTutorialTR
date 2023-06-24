@@ -12,5 +12,10 @@ public class _15_Word_Count {
         //Kodu aşağıya yazınız.
 
 
+        String [] arr = {"Removes white space from both ends of a string"};
+
+
+
+
     }
 }

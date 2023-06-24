@@ -13,6 +13,19 @@ public class _06_Array_contains {
 
         //Kodu aşağıya yazınız..
 
+        String [] arr = {"Apple", "Orange", "Banana", "Pineapple"};
+
+        boolean result = false;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i]== "Apple") {
+
+                System.out.println("true");
+
+            }
+
+        }
 
     }
 }

@@ -1,5 +1,7 @@
 package tasks12;
 
+import java.util.Arrays;
+
 public class _09_array_second_max {
 
     public static void main(String[] args) {
@@ -10,6 +12,26 @@ public class _09_array_second_max {
          */
 
         // Kodu aşağıya yazınız..
+
+
+        int [] arr = {15, 25, 22, 18, 30};
+
+        Arrays.sort(arr);
+
+        if (arr.length>=2){
+
+            System.out.println("En büyük ikinci eleman = " +arr[arr.length-2]);
+
+        }else
+
+            System.out.println("Array yeterli elemana sahip değil");
+
+
+
+
+
+
+
 
 
 

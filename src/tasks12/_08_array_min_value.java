@@ -11,6 +11,21 @@ public class _08_array_min_value {
 
         // Kodu aşağıya yazınız..
 
+        int [] arr = {14, 19, 5, 21};
+
+        int enKucuk = arr[0];
+
+        for (int i = 0; i < arr.length; i++) {
+
+            if (arr[i]<=enKucuk) {
+
+                enKucuk= arr[i];
+
+            }
+
+        }
+
+        System.out.println("Array deki en kucuk değer = " + enKucuk);
 
     }
 }
