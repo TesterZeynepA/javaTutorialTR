@@ -18,7 +18,7 @@ public class Task01 {
             System.out.println(i+1 +". nci degeri gir");
             arr[i]=input.nextInt();//boyut kadar kullanicindan deger alinarak arr array inin elemanlari atandi
         }
-        System.out.println("seniin istedigin array budur = "+ Arrays.toString(arr));
+        System.out.println("senin istedigin array budur = "+ Arrays.toString(arr));
 
         Arrays.sort(arr);//burada array kucukten buyuge siralandi
 
@@ -27,7 +27,28 @@ public class Task01 {
         }
 
 
+        // 2. yol
 
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Dizi boyutunu girin: ");
+        int size = scanner.nextInt();
+
+        int[] array = new int[size];
+
+        System.out.println("Dizi elemanlarını girin:");
+
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        Arrays.sort(array);
+
+        System.out.println("Sıralama (büyükten küçüğe):");
+        for (int i = size - 1; i >= 0; i--) {
+            System.out.println(array[i]);
+
+        }
     }
 }

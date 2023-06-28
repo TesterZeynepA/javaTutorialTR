@@ -1,5 +1,7 @@
 package tasks12;
 
+import java.util.Arrays;
+
 public class _17_2d_Array {
 
     public static void main(String[] args) {
@@ -13,21 +15,21 @@ public class _17_2d_Array {
         //Kodu aşağıya yazınız.
 
 
-        int[][] multiArr = {{5, 2, 1}, {10, 2, 3, 6}, {1, 2}};//  3*4
-
-        int toplam = 0;
+        int[][] multiArr = {{2,3,2}, {4, 1, 5}, {7, 2, 5}};//
 
         for (int i = 0; i < multiArr.length; i++) {
 
+
             for (int j = 0; j < multiArr[i].length; j++) {
 
-                toplam+=multiArr[i][j];
+                if (multiArr[i][j]==2)
+                    multiArr[i][j]=6;
+
             }
+
         }
-        System.out.println("toplam = " + toplam);
 
-
-
+        System.out.println("Arrays.deepToString(multiArr) = " + Arrays.deepToString(multiArr));
 
     }
 }

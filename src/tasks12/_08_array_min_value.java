@@ -1,5 +1,7 @@
 package tasks12;
 
+import java.util.Arrays;
+
 public class _08_array_min_value {
 
     public static void main(String[] args) {
@@ -26,6 +28,19 @@ public class _08_array_min_value {
         }
 
         System.out.println("Array deki en kucuk değer = " + enKucuk);
+
+
+
+        //2. yol
+
+        System.out.println("*** sort ile çözüm ****");
+
+        Arrays.sort(arr);
+
+        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+
+        System.out.println("arr[arr.length-4] = " + arr[arr.length - 4]);
+
 
     }
 }

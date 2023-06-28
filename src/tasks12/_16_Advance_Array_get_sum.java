@@ -15,17 +15,16 @@ public class _16_Advance_Array_get_sum {
         //Kodu aşağıya yazınız.
 
 
-        String str = "$12, $23, $10, $2, $5, $2";
+        String str = "$12 $23 $10 $2 $5 $2";
 
-        String[] arr = new String[]{str.replace('$', ' ')};
+        String [] arr = str.split(" ");
 
         int toplam = 0;
 
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
 
 
-            toplam += Integer.parseInt(arr[i].replaceAll("$", ""));
-
+            toplam += Integer.parseInt(arr[i].replace("$", ""));
 
         }
 
@@ -33,9 +32,4 @@ public class _16_Advance_Array_get_sum {
         System.out.println("toplam = " + toplam);
 
     }
-
-
-
-
-
     }

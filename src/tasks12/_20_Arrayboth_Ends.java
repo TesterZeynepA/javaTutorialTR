@@ -1,5 +1,7 @@
 package tasks12;
 
+import java.util.Arrays;
+
 public class _20_Arrayboth_Ends {
 
     public static void main(String[] args) {
@@ -19,12 +21,9 @@ public class _20_Arrayboth_Ends {
         int[] newArr= new int[2];
 
         newArr[0]=ilkArr[0];
+        newArr[1] =ilkArr[ilkArr.length-1];
 
-
-
-
-
-
+        System.out.println("Arrays.toString(newArr) = " + Arrays.toString(newArr));
 
 
     }

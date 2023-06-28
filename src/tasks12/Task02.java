@@ -24,6 +24,27 @@ public class Task02 {
         System.out.println("toplam = " + toplam);//toplam = 60
 
 
+        //2.yol
 
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Dizi boyutunu girin: ");
+        int size = scanner.nextInt();
+
+        int[] array = new int[size];
+
+        System.out.println("Dizi elemanlarını girin:");
+
+        for (int i = 0; i < size; i++) {
+            array[i] = scanner.nextInt();
+        }
+
+        int sayiToplam = 0;
+
+        for (int i = 0; i < size; i++) {
+            sayiToplam += array[i];
+        }
+
+        System.out.println("Elemanların toplamı: " + sayiToplam);
     }
 }

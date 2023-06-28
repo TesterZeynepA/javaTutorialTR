@@ -25,11 +25,11 @@ public class _19_2d_Array_3 {
 
             for (int j = 0; j < arrMD[i].length; j++) {
 
-                arrMD[i][j] = arrMD[i][j].replace("ohaio", "Florida");
+                //arrMD[i][j] = arrMD[i][j].replace("ohaio", "Florida");
 
-                //  if (arr[i][j].equals("ohio")) {
-                //      arr[i][j]="Florida";
-                //  }
+                  if (arrMD[i][j].equals("ohio")) {
+                      arrMD[i][j]="Florida";
+                  }
 
 
             }
