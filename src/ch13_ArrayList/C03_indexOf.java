@@ -12,7 +12,7 @@ public class C03_indexOf {
         ArrayList<String> city = new ArrayList<>(Arrays.asList("Ankara", "Erzurum", "İzmir", "Konya", "Bursa", "Mogadishu", "Aydin"));
         System.out.println("city = " + city);
 
-        ArrayList<String> country = new ArrayList<>(List.of("MADAGASKAR", "ALMANYA", "POLONYA", "UGANDTA", "ITALYA"));
+        ArrayList<String> country = new ArrayList<>(List.of("MADAGASKAR", "ALMANYA", "POLONYA", "UGANDA", "ITALYA"));
         System.out.println("country = " + country);
 
         System.out.println("city.indexOf(\"Samsun\") = " + city.indexOf("Samsun"));//city.indexOf("Samsun") = -1
