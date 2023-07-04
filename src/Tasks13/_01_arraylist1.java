@@ -1,5 +1,9 @@
 package Tasks13;
 
+
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class _01_arraylist1 {
 
     /*
@@ -18,9 +22,4 @@ public class _01_arraylist1 {
     public static void main(String[] args) {
 
 
-
-
-    }
-
-
-}
+    }}
