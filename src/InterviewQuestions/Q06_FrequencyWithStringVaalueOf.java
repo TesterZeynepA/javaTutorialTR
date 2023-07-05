@@ -11,32 +11,33 @@ public class Q06_FrequencyWithStringVaalueOf {
 
           String str = "Java is so Good";
 
-          harfSayaci(str);
 
-      }
 
-      private static void harfSayaci(String str) {
-
-            int [] harfList = new int[Character.MAX_VALUE +1 ];
+          String strOutput = "";
 
             for (int i = 0; i < str.length(); i++) {
 
-                  char ch = str.charAt(i);
+                  int count =0;
 
-                  int index = (int) ch;
+               for (int j= 0; j < str.length(); j++) {
 
-                  harfList[index] ++;
+                     if (str.charAt(i) == str.charAt(j)) {
+
+                           count++;
+                     }
+               }
+
+               if (!strOutput.contains(String.valueOf(str.charAt(i)))) {// stroutput da döndgüden gelen harf yoksa
+
+                     strOutput+= "" + str.charAt(i)+ count;
+
+
+
+
+               }
+
             }
-
-            for (int i = 0; i < harfList.length; i++) {
-
-                  if (harfList[i]>0) {
-
-                        System.out.println((char) i + "= " + harfList[i]);
-                  }
-
-            }
-
+            System.out.println("strOutput = " + strOutput);
 
       }
 

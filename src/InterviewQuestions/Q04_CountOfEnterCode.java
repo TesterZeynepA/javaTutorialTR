@@ -12,12 +12,14 @@ public class Q04_CountOfEnterCode {
         Scanner input = new Scanner (System.in);
         System.out.println("Lütfen şifrenizi giriniz");
         String sifre = input.nextLine();
+        boolean flag= true;
 
-        while (count>0){
+        while (flag){
+
             if (sifre.equals(pin)){
 
                 System.out.println("şifreniz doğru. Giriş yaptınız");
-                break;
+                flag =false;
             }else {
                 System.out.println("şifre eşleşmedi tekrar deneyin");
                 sifre = input.nextLine();
@@ -27,6 +29,18 @@ public class Q04_CountOfEnterCode {
                     break;
                 }
             }
+
+        }
+
+
+        //2. yol
+
+        while (true){
+
+
+
+
+
 
         }
 

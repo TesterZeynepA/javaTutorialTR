@@ -14,18 +14,24 @@ public class Q03_PrimeNumber {
         System.out.println("bir sayi giriniz : ");
         int sayi = input.nextInt();
 
-        boolean flag = true; //asaldir
+        boolean asalMi = true; //asaldir
 
         if(sayi>=2){
             for (int i = 2; i <sayi ; i++) {
                 if(sayi%i == 0){ //herhangi bir boleni varsa
-                    flag=false;
+                    asalMi=false;
                     break;
                 }
             }
-           if(flag) System.out.println(sayi + " sayisi asaldir");
-           else System.out.println(sayi + " sayisi asal degildir");
-        }else System.out.println(sayi + " sayisi asal degildir"); //0,1, negatif sayiari bertaraf etmek icin
+           if(asalMi) {
+
+               System.out.println(sayi + " sayisi asaldir");
+
+           }else System.out.println(sayi + " sayisi asal degildir");
+
+        }else {System.out.println(sayi + " sayisi asal degildir"); //0,1, negatif sayiari bertaraf etmek icin
+
+    }
 
     }
 

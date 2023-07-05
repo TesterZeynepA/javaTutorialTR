@@ -21,33 +21,25 @@ public class Q02_MergeCertainCharacters {
         System.out.println("ilk ve son harf için tekrar sayısını giriniz");
         int tekrar = input.nextInt();
 
-        String yinelenenString = ilkSonHarfTekrari(str, tekrar);
-        System.out.println(yinelenenString);
+        System.out.println("ilkSonHarfTekrari(str, tekrar) = " + ilkSonHarfTekrari(str, tekrar));
+
+
     }
 
     public static String ilkSonHarfTekrari(String str, int tekrar) {
-        if (str.isEmpty() || tekrar <= 0) {
-            return "";
-        }
-
-        char ilkHarf = str.charAt(0);
-        char sonHarf = str.charAt(str.length() - 1);
+      String output= "";
 
 
-        char[] tekrarKarakterler = new char[tekrar*2];
 
-        int index= 0;
+        for (int i = 0; i <= tekrar ; i++) {
 
-        for (int i = 0; i < tekrar; i+=2) {
-            tekrarKarakterler[index++] = ilkHarf;
-            tekrarKarakterler[index++] = sonHarf;
+            output+= str.substring(0,1)+str.substring(str.length()-1);
         }
 
 
+        return output;
 
-        return new String(tekrarKarakterler);
-
-    }
+    }//main sonu
 
 
-}
+}//class sonu
