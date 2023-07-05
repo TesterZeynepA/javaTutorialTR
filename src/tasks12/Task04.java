@@ -15,7 +15,7 @@ public class Task04 {
 
         int[] arr = new int[boyut];
 
-        System.out.println("Dizi elemanlarını girin:");
+        System.out.println("Array elemanlarını giriniz:");
 
         for (int i = 0; i < boyut; i++) {
             arr[i] = input.nextInt();

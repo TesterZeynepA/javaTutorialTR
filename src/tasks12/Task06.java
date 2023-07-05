@@ -24,7 +24,13 @@ public class Task06 {
         Arrays.sort(arr);
 
         System.out.println("Array elemanlarının büyükten küçüğe sıralaması:");
+
         terstenArray(arr);
+
+        int[] buyuktenKucugeArr = tersCevrilmisArray2(arr);
+
+        System.out.println("Büyükten küçüğe sıralanan array: " + Arrays.toString(buyuktenKucugeArr));
+
     }
 
     public static void terstenArray(int[] arr) {
@@ -44,7 +50,41 @@ public class Task06 {
         System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
 
 
+
     }
 
 
-}
+
+    public static int[] tersCevrilmisArray2(int[] array) {
+
+        Arrays.sort(array);
+
+        // Array i terse çeviriyoruz
+
+        int[] buyuktenKucugeArr = new int[array.length];
+        int index = 0;
+        for (int i = array.length - 1; i >= 0; i--) {
+            buyuktenKucugeArr[index] = array[i];
+            index++;
+        }
+
+        return buyuktenKucugeArr;
+
+      // System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+      // int []buyuktenkucuge= buyuktenkucuge(arr);
+      // System.out.println("Arrays.toString((buyuktenkucuge)) = " + Arrays.toString((buyuktenkucuge)));
+
+      // public static int[] buyuktenkucuge(int[] arr) {
+      //     Arrays.sort(arr);
+      //     int[] buyuktenkucuge = new int[arr.length];
+      //     for (int i = 0; i < arr.length; i++) {
+      //         buyuktenkucuge[i]=arr[arr.length-1-i];
+      //     }
+      //     return buyuktenkucuge;
+      //
+
+        }}
+
+
+
+
