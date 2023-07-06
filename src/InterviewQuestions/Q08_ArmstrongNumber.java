@@ -18,19 +18,36 @@ public class Q08_ArmstrongNumber {
 
         int sayi = input.nextInt();
 
-        int birler = sayi %10;
-        int onlar= (sayi/10)%10;
-        int yüzler = (sayi/100)%10;
-        int binler = (sayi/1000)%10;
+        int rakamKupToplam =0;
 
-        int armstrong = (birler*birler*birler)+ (onlar*onlar*onlar)+ (yüzler*yüzler*yüzler)+ (binler*binler*binler);
-        if (sayi == armstrong){
+        int girilenSayi= sayi;
 
-            System.out.println(sayi + " sayisi Armstrong bir sayidir");
+        while (sayi>0){
+           // rakamKupToplam+= (sayi%10*sayi%10*sayi%10);
+
+            rakamKupToplam+= Math.pow(sayi%10, 3);
+
+            sayi/=10;
+
+        }
+
+        if (rakamKupToplam==girilenSayi) {
+
+            System.out.println(girilenSayi + " sayisi Armstrong bir sayidir");
+
+        }else {
+        System.out.println(girilenSayi + " sayisi Armstrong bir sayi değildir");  }
 
 
-        }else
-            System.out.println(sayi + " sayisi Armstrong bir sayi değildir");
+
+
+
+
+
+        //Task 2-> Birden baslayarak girilen sayıya kadar her bir tamsayının amstrong sayı olup olmadıgını
+        //          gösteren program yazınız
+
+        System.out.println("***** task 2 *****");
 
 
 

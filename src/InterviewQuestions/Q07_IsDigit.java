@@ -21,29 +21,29 @@ public class Q07_IsDigit {
         System.out.println("bir string giriniz");
         String str = input.nextLine();
 
-        String [] arr = str.split(" ");
 
-        int toplam = 0;
-
-        for (int i = 0; i < arr.length; i++) {
-
-
-            toplam += Integer.parseInt(arr[i].replaceAll("\\D", ""));
-
-        }
-
-
-        System.out.println("toplam = " + toplam);
-
-
-
-
-
-
+        System.out.println("sumOfDigit(str) = " + sumOfDigit(str));
 
 
     }
 
+    private static int sumOfDigit(String s) {
+
+        int toplam=0;
+
+        for (int i = 0; i < s.length(); i++) {
+
+            if (Character.isDigit(s.charAt(i))){
+
+                toplam+= Character.getNumericValue(s.charAt(i));// ascii değeri olan character numerik
+
+              //  toplam+=Integer.valueOf(s.charAt(i));
+            }
+
+        }
+        return  toplam;
+
+    }
 
 
 }

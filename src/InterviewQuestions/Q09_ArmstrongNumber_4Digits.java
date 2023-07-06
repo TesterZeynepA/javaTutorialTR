@@ -17,28 +17,24 @@ public class Q09_ArmstrongNumber_4Digits {
         Scanner input = new Scanner(System.in);
         System.out.println("Beş basamakli bir sayi giriniz");
 
-        int sayi = input.nextInt();
+       int rakamKupToplam= 0;
 
-        int birler = sayi %10;
-        int onlar= (sayi/10)%10;
-        int yüzler = (sayi/100)%10;
-        int binler = (sayi/1000)%10;
-        int onBinler = (sayi/10000)%10;
+        String sayi= input.next();
+        
+        String [] rakam = sayi.split("");
 
-        int armstrong = (birler*birler*birler)+ (onlar*onlar*onlar)+ (yüzler*yüzler*yüzler)+
-                (binler*binler*binler)+ (onBinler*onBinler*onBinler);
+        for (int i = 0; i < rakam.length; i++) {
 
-        if (sayi == armstrong){
+            rakamKupToplam+= Math.pow(Double.parseDouble(rakam[i]), rakam.length);
+            
+        }
 
-            System.out.println(sayi + " sayisi Armstrong bir sayidir");
+        System.out.println(
+                rakamKupToplam == Integer.parseInt(sayi) ?
+                        ("girilen sayi " + sayi + " AMSTRONG :) ") :
+                        "girilen sayi " + sayi + " AMSTRONG değil :( ");
 
-
-        }else
-            System.out.println(sayi + " sayisi Armstrong bir sayi değildir");
-
-
-
-
+        
 
 
 

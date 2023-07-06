@@ -13,6 +13,29 @@ public class Q10_FibonacciListNumber {
 
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("bir tam sayi giriniz");
+        int sayi = input.nextInt();
+
+
+        for (int i = 0; i <= sayi; i++) {
+
+            System.out.println("fibonacci(i) = " + fibonacci(i));
+
+        }
+
+    }
+
+    private static int fibonacci(int n) {
+
+        if (n <= 1) {
+            return n;
+
+        } else {
+
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+
     }
 
 }
