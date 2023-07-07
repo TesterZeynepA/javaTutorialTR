@@ -15,10 +15,19 @@ public class C04_PassByValue_Reference {
          */
 
         etiketFiyat = 100;
+        System.out.println("method call oncesi etiket Fiyati "+ etiketFiyat);
+        indirimOrani = 0.1;
 
-        System.out.println("method call öncesi etiket Fiyati = " + etiketFiyat);
+        indir();  //method call  etiket fiyati method icinden 90.0
+        indir();  //method call  etiket fiyati method icinden 81.0
+        indir();  //method call  etiket fiyati method icinden 72.9
 
+        System.out.println("method call sonrasi etiket Fiyati "+ etiketFiyat);
 
+    }
+    private static void indir() {
+        etiketFiyat *= (1-indirimOrani) ; //etiket fiyati indirimli hale geldi
+        System.out.println("etiket fiyati method icinden "+ etiketFiyat);
 
 
     }
