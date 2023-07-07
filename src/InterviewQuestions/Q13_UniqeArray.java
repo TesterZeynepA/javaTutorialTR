@@ -12,33 +12,61 @@ public class Q13_UniqeArray {
      */
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        System.out.println("Array in boyutunu giriniz");
-        int boyut= input.nextInt();
+      //  int[] number = {1, 2, 2, 3, 1, 4, 2, -2, 5, 6, 8, 7, 5, 6, -2, 9, 3, 10};
 
-        int [] arr = new int[boyut];
+         Scanner input = new Scanner(System.in);
+         System.out.println("Array in boyutunu giriniz");
+         int boyut= input.nextInt();
+//
+         int [] number = new int[boyut];
+//
+         System.out.println("Array in elemanlarını giriniz");
+//
+         for (int i = 0; i < boyut; i++) {
+//
+             number[i] = input.nextInt();
+//
+         }
 
-        System.out.println("Array in elemanlarını giriniz");
+        ArrayList<Integer> tekrarsızSayilar = new ArrayList<>();
 
-        for (int i = 0; i < boyut; i++) {
-
-            arr[i] = input.nextInt();
-
-        }
-
-        int [] yeniArr = new int[0];
-
-        for (int i = 0; i < boyut; i++) {
-
-            if (i==(i+1)) {
-
-
+        for (int i = 0; i < number.length; i++) {
+            boolean yinelenenSayi = false;
+            for (int j = i + 1; j < number.length; j++) {
+                if (number[j] == number[i]) {
+                    yinelenenSayi = true;
+                    break;
+                }
+            }
+            if (!yinelenenSayi) {
+                tekrarsızSayilar.add(number[i]);
             }
         }
 
-    }
+        int[] yeniArr = new int[tekrarsızSayilar.size()];
+
+        for (int i = 0; i < tekrarsızSayilar.size(); i++) {
+
+            yeniArr[i] = tekrarsızSayilar.get(i);
+
+
+        }
+        //Yeni diziyi yazdıralim
+
+        for (int num : yeniArr) {
+
+            System.out.println(num + " ");
+
+        }
+
 
     }
+
+
+}
+
+
+
 
 
 

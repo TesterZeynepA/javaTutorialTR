@@ -18,9 +18,9 @@ public class Q10_FibonacciListNumber {
         int sayi = input.nextInt();
 
 
-        for (int i = 0; i <= sayi; i++) {
+        for (int i = 0; fibonacci(i)<=sayi; i++) {
 
-            System.out.println("fibonacci(i) = " + fibonacci(i));
+            System.out.print( fibonacci(i) + " ");
 
         }
 
@@ -31,10 +31,9 @@ public class Q10_FibonacciListNumber {
         if (n <= 1) {
             return n;
 
-        } else {
+        }
 
             return fibonacci(n - 1) + fibonacci(n - 2);
-        }
 
     }
 
