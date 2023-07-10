@@ -1,5 +1,9 @@
 package Tasks13;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+
 public class _05_arraylist5 {
 
     /*
@@ -13,6 +17,23 @@ public class _05_arraylist5 {
 
     public static void main(String[] args) {
 
+        ArrayList <String> country = new ArrayList<>(Arrays.asList("New jersey" ,"New york" , "Atlanta", "Florida" ,"Ohio"));
+
+        rotateList(country);
+
+    }
+
+    private static void rotateList(ArrayList<String> country) {
+
+        Collections.reverse(country);
+
+        System.out.println("country = " + country);
+
+        for (String w : country ) {
+
+            System.out.println(w);
+
+        }
 
     }
 
