@@ -1,5 +1,8 @@
 package ch19_StringBuilder;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class C01_StringBuilder {
     public static void main(String[] args) {
 /*
@@ -26,13 +29,54 @@ Multi threading varsa, bu islerin siraya konulmasi lazim.Islerin siraya konulmas
 
     */
 
+        String str = "javAslan";
+
+        System.out.println("method öncesi str = " + str);
+
+        strBirlestir(str);
+
+        System.out.println("method sonrası str = " + str);
+
+        // task -> 50 000 tekrarlı bir loop ile String ve StringBuilder obj run time
+// surelerini karsılatırın
+
+        String s = "a";
+
+        int tekrar =50000;
+
+        StringBuilder sb = new StringBuilder("");
+
+        LocalTime str1Basla = LocalTime.now();
+        System.out.println("string obj basladi = " + str1Basla);
+
+        for (int i = 0; i < tekrar; i++) {
+
+            s += i;
+        }
+
+        LocalTime str1Bitti = LocalTime.now();
+        System.out.println("string obje bitti = " + str1Bitti);
+
+        System.out.println("fark " + (str1Bitti.getNano() - str1Basla.getNano()));
 
 
+        LocalTime sbBasla = LocalTime.now();
+        System.out.println("string builder obj basladi = " + sbBasla);
 
+        for (int i = 0; i < tekrar; i++) {
 
+            sb.append(i);
+        }
 
+        LocalTime sbBitti = LocalTime.now();
+        System.out.println("string builder obje bitti = " + sbBitti);
 
+        System.out.println("fark " + (sbBitti.getNano() - sbBasla.getNano()));
 
+    }
 
+    private static void strBirlestir(String str) {
+
+        System.out.println("method içinden str = " + str);
     }
 }
