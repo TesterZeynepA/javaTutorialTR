@@ -16,14 +16,10 @@ public class Task07_RomaRakamlari {
 		*/
     public static void main(String[] args) {
 
-        String sayi = "MCMXLV";
-       // String sayi = "DCCCV";
-
+         String sayi = "MCMXLV";
+        // String sayi = "DCCCV";
 
         System.out.println("romaRakamlari(sayi) = " + romaRakamlari(sayi));
-
-
-
 
     }
 
@@ -44,7 +40,7 @@ public class Task07_RomaRakamlari {
 
         }
 
-        for (int i = 0; i < sayi.length()-1; i++) {
+        for (int i = 0; i < sayi.length(); i++) {
 
             rakamToplam+= romaRakam(sayi.charAt(i));
 
@@ -67,5 +63,4 @@ return rakamToplam;
             return 0;
 
     }//main
-
 }//class
