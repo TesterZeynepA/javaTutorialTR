@@ -19,21 +19,15 @@ public class _05_arraylist5 {
 
         ArrayList <String> country = new ArrayList<>(Arrays.asList("New jersey" ,"New york" , "Atlanta", "Florida" ,"Ohio"));
 
-        rotateList(country);
+        System.out.println("rotateList(country) = " + rotateList(country));
 
     }
 
-    private static void rotateList(ArrayList<String> country) {
+    private static ArrayList<String> rotateList(ArrayList<String> country) {
 
         Collections.reverse(country);
 
-        System.out.println("country = " + country);
-
-        for (String w : country ) {
-
-            System.out.println(w);
-
-        }
+       return country;
 
     }
 

@@ -23,7 +23,7 @@ public class _07_arraylist7 {
 
     public static void main(String[] args) {
 
-        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(8,7,9,6));
+        ArrayList<Integer> list1 = new ArrayList<>(Arrays.asList(8,7,9,6,7));
 
         ArrayList<Integer> list2 = new ArrayList<>(Arrays.asList(6,7,12,3,1));
 
@@ -39,7 +39,7 @@ public class _07_arraylist7 {
 
         for (Integer num : list1 ) {
 
-                if (list2.contains(num)) {
+                if (list2.contains(num) ) {
 
                     ortakSayilar.add(num);
                 }
@@ -47,6 +47,5 @@ public class _07_arraylist7 {
 
         return ortakSayilar;
     }
-
 
 }

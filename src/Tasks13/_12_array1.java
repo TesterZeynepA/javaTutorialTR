@@ -1,5 +1,7 @@
 package Tasks13;
 
+import java.util.List;
+
 public class _12_array1 {
 
     /*
@@ -20,10 +22,5 @@ public class _12_array1 {
 
     public static void main(String[] args) {
 
-
-
-
     }
-
-
 }

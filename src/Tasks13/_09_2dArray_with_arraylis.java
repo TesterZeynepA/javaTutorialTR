@@ -26,9 +26,16 @@ public class _09_2dArray_with_arraylis {
 
         int [][] arrnumbers = {{1,2,3},{4,5,6},{7,8,9}};
 
-        List<int[]> listNumbers = asList(arrnumbers);
+        ArrayList<Integer> listNumber = new ArrayList<>();
 
+        for (int i = 0; i < arrnumbers.length; i++) {
 
+            for (int j = 0; j < arrnumbers[i].length; j++) {
 
+                listNumber.add(arrnumbers[i][j]);
+            }
+        }
+
+        System.out.println("listNumber = " + listNumber);
     }
 }
