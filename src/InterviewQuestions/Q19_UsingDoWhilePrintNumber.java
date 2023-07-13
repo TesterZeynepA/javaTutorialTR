@@ -13,5 +13,14 @@ public class Q19_UsingDoWhilePrintNumber {
      */
     public static void main(String[] args) {
 
+        int sayi =0;
+
+        do {
+
+            System.out.println("sayi = " + sayi);
+
+            sayi+=5;
+        }while (sayi<=100);
+
     }
 }

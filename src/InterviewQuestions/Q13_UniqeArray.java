@@ -12,8 +12,6 @@ public class Q13_UniqeArray {
      */
     public static void main(String[] args) {
 
-      //  int[] number = {1, 2, 2, 3, 1, 4, 2, -2, 5, 6, 8, 7, 5, 6, -2, 9, 3, 10};
-
          Scanner input = new Scanner(System.in);
          System.out.println("Array in boyutunu giriniz");
          int boyut= input.nextInt();
@@ -49,7 +47,6 @@ public class Q13_UniqeArray {
 
             yeniArr[i] = tekrarsızSayilar.get(i);
 
-
         }
         //Yeni diziyi yazdıralim
 
@@ -58,6 +55,34 @@ public class Q13_UniqeArray {
             System.out.println(num + " ");
 
         }
+
+        //2. yol
+
+       int[] arr = {1, 2, 2, 3, 1, 4, 2, -2, 5, 6, 8, 7, 5, 6, -2, 9, 3, 10};
+
+        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+
+        List<Integer> list = new ArrayList<>();// arr deki benzersiz elemanların depolanacağı boş list
+
+        for (int i = 0; i < arr.length; i++) {
+
+           if (!list.contains(arr[i])) {
+
+               list.add(arr[i]);
+           }
+
+        }
+
+        System.out.println("list = " + list);
+
+        int benzersizArr [] = new  int[list.size()];
+
+        for (int i = 0; i < list.size(); i++) {
+
+            benzersizArr[i] = list.get(i);
+        }
+
+        System.out.println("Arrays.toString(benzersizArr) = " + Arrays.toString(benzersizArr));
 
 
     }

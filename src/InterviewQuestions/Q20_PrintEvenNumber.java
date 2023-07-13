@@ -10,7 +10,21 @@ public class Q20_PrintEvenNumber {
     Girilen sayını tek-çiftlğini return eden method create ediniz.
     */
     public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Bir sayi giriniz : ");
+        int sayi = input.nextInt();
 
+        System.out.println(tekCiftKontrol(sayi));
+        System.out.println(tekCiftKontrol1(sayi));
+
+    }//main sonu
+
+    private static boolean tekCiftKontrol(int sayi) {
+        return sayi % 2 == 0 ? true : false;
     }
 
-}
+    private static String tekCiftKontrol1(int sayi) {
+        return sayi % 2 == 0 ? "sayı CİFT" : "sayı TEK";
+    }
+
+}//Class sonu

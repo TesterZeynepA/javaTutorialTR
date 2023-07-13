@@ -23,7 +23,23 @@ public class Q17_SpecialCharRemoveArray {
 
     public static void main(String[] args) {
 
+       // ArrayList<String> money = new ArrayList<>(Arrays.asList("$13", "$15", "$20"));
+        ArrayList<String> money = new ArrayList<>(Arrays.asList("$11", "$-45", "$2"));
+
+        System.out.println("getSum1(money) = " + getSum1(money));
+
+
+    }//main sonu
+
+    private static int getSum1(ArrayList<String> para) {
+        int toplam=0;
+        for (String w: para) {
+           toplam += Integer.parseInt(w.replace("$", ""));
+        }
+        if (toplam<0){
+            return -1;
+        }else
+            return toplam;
     }
+}//class sonu
 
-
-}
