@@ -1,0 +1,80 @@
+Ogrenci class;(Serap Hoca)
+
+    ogrencilist;
+
+Ogretmen class;(Serap Hoca)
+
+    ogretmenlist;
+
+Kisi class;(Serap Hoca)
+
+    kisiList(ogrencilist+ogretmenlist);
+
+İslemler class;
+
+    void anaMenu();(Mustafa)
+        ====================================
+        	 ÖĞRENCİ VE ÖĞRETMEN YÖNETİM PANELİ
+        	====================================
+        	 1- ÖĞRENCİ İŞLEMLERİ
+        	 islemlerMenu();-call
+        	 2- ÖĞRETMEN İŞLEMLERİ
+        	 islemlerMenu();-call
+        	 Q- ÇIKIŞ
+        	 cikis();-call
+
+
+    void islemlerMenu();(Zeynep)
+        switch-case;
+        case 1:
+        IslemMethodlari.ekle();-call
+        islemlerMenu();
+        case 2:
+        IslemMethodlari.ara();-call
+        islemlerMenu();
+
+        *
+        *
+        *
+
+
+        ============= İŞLEMLER Methodları =============
+        		 1-EKLEME(Zeynep)
+        		    isim gir;
+        		    kimlikNo gir;
+        		    yas gir;
+
+        		    if(Ogrenci)> numara gir;, sınıf gir;
+        		        ogrencilist.add;
+        		    else if(Ogretmen) sicilNo gir;, Bolum gir;
+        		        ogretmenlist.add;
+
+
+        		 2-ARAMA(Serap)
+        		    kimlikNo gir;
+        		    foreach(Kisilist);if- else
+                        sout(Kisilist.get)
+
+
+        		 3-LİSTELEME(Mustafa)
+        		       sout(ogrencilist);
+                       sout(ogretmenlist);
+
+
+        		 4-SİLME (Serap)
+        		       kimlikNo gir;
+        		        foreach(Kisilist);if- else
+        		            Kisilist.remove ;
+
+
+        		 5-ANA MENÜ (Zeynep)
+        		        anamenu();-call
+
+
+        		 Q-ÇIKIŞ (Zeynep)
+        		        void cikis();
+        		            sout(Çıkış);
+
+Runner class;
+-main
+anaMenu();-call
