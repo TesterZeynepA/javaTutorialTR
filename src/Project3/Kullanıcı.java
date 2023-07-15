@@ -2,21 +2,27 @@ package Project3;
 
 import java.time.LocalDateTime;
 
-//task 1. stepp
-public class Kullanıcı {//kullanıcı obj uretecek kalıphane class -> main olmaz
 
-    String name;//obj de değer alacak inst. var.
-    LocalDateTime kayıtZamanı;//obj de değer alacak inst. var.
+public class Kullanıcı {//task 1. step kullanıcı obj uretecek kalıphane class -> main olmaz
 
-    public Kullanıcı(String name, LocalDateTime kayıtZamanı) {//full p'li teleskopik cons.
+    String name;
+    LocalDateTime kayitZamani;
+
+   // public Kullanıcı() {
+   //
+   // }
+
+    public Kullanıcı(String name, LocalDateTime kayitZamani) {//obj üretecek full p li telescopic const
         this.name = name;
-        this.kayıtZamanı = kayıtZamanı;
+        this.kayitZamani = kayitZamani;
+
     }
 
     @Override
-    public String toString() {//bu class'dan olusturulan obj print etmek için obj datalarını string'e cevirir
-        return
+    public String toString() {//obj field larını stringe çeviren method
+        return "Kullanıcı{" +
                 "name='" + name + '\'' +
-                        ", kayıtZamanı=" + kayıtZamanı;
+                ", kayitZamani=" + kayitZamani +
+                '}';
     }
 }

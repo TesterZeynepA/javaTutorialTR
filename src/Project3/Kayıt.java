@@ -4,39 +4,41 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Kayıt {
+public class Kayıt {//step 2->
 
-    ArrayList<Kullanıcı> kullanıcıKisiler = new ArrayList<>();//kullanıcı class'dan olusturlacak obj tutulacagı bos list
+   static ArrayList<Kullanıcı> kullanıcılar = new ArrayList<>();//Kullanıcı class dan create edilen objelerin depolanacağı boş list
 
-    //Task 2. step
-    public ArrayList<Kullanıcı> kayıtAl() {//kullanıcı Class'dan onj uretmek için cons.'a gereken name ve kayıtzamanı
-        // bilgilerini olusturrp olusan obj'i list'e ekler
-        Scanner sc = new Scanner(System.in);
-        System.out.print("agam adını giresen : ");
-        String ad = sc.nextLine();//Kullanıcı obj için name alındı
-        Kullanıcı k1 = new Kullanıcı(ad, LocalDateTime.now());//k1 obj name kullanıcıdan kayıtZamanı LocalDateTime.now() alacak parametre olarak
-        kullanıcıKisiler.add(k1);//olusturlan k1 obj liste eklendi
+    public static ArrayList<Kullanıcı> kayıtAl(){
 
-        return kullanıcıKisiler;//kullanıcıKisiler list'i method cıktısı return olarak tanımlandı
+        System.out.print("Adınızı giriniz");
+
+        Kullanıcı k1obj = new Kullanıcı(new Scanner(System.in).nextLine(), LocalDateTime.now());//name ve kayıt zamanı p olarak girilen k1obj üretildi
+        kullanıcılar.add(k1obj);//üretilen k1obj kullanıcılar liste eklendi
+        return kullanıcılar;
     }
 
-    //Task 3. step
-    public void sansliKullanici(ArrayList<Kullanıcı> kllObj) {//kulanıcı list'indeki obj'lerin kayıtZamanını 10 sn
-        //az olup olmamasına göre sanslı kullanıcı print edecek
-        for (Kullanıcı k : kllObj) {//Kullanıcı Class'dan kayıtAl() method ile uretilip kullanıcıKişi list'ine eklene
-            //  objler döngüye alın
-            if (k.kayıtZamanı.getSecond() <= 10) {//döngüye herbir kullanıc obj kayıtzamanı datasındaki saniye verisi
-                // 10'dan kucuk olma sartı
-                System.out.println(k.name + " agam sanslı kişisin 5 kilo BAL kazandın :) sisteme giriş zamanın :  " + k.kayıtZamanı);
-            } else
-                System.out.println(k.name + " agam sanslı kişisin degilsen :( BAL'ı NAH'sıl kazanacaksın Kovan yağmalandı   sisteme giriş zamanın :  " + k.kayıtZamanı);
-        }
+public static void sansliKullaniciBul(ArrayList<Kullanıcı>kllnc){
+
+    for (Kullanıcı avuc : kllnc){
+
+        if (avuc.kayitZamani.getSecond()<=10){//tekrardaki her bir kullanıcı obj kayıt zamanı saniyesi 10 dan az olma şartı
+
+            System.out.println(avuc.name + " Tebrik ederiz, bugünün şanslı kişisi sizsiniz! Kayıt zamanınız " +avuc.kayitZamani + "");
+        }else System.out.println(avuc.name + " Malesef şanslı kişi değilsiniz. Kayıt zamanınız " +avuc.kayitZamani);
+
 
     }
-
-    public void listele(ArrayList<Kullanıcı> kllObj) {
-        System.out.println(kllObj);//obj 'leri Kuulanıcı Class'daki toString print eder
-    }
-
-
 }
+
+public static void listele(ArrayList<Kullanıcı> kullanıcı){
+
+    System.out.println(kullanıcı);
+}
+
+
+    public void cıkıs() {
+
+        System.out.println("Çıkış yaptınız...");
+    }
+}
+
