@@ -50,9 +50,5 @@ public class C02_Arrays {
         //Arrays.binarySearch(numbers, istenenSayi) = 6
 
 
-
-
-
-
     }
 }

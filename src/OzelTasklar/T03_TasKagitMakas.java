@@ -1,56 +1,70 @@
 package OzelTasklar;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class T03_TasKagitMakas {//verildi
 
     public static void main(String[] args) {
-        // tas >makas
-        // makas >kagit
-        //kagit >tas
-        int numberOfFirstWin = 0;
-        int numberOfSecondWin = 0;
-        int numberOfComWin = 0;
-        int gameOver = 3;
+     /*
+Taş kağıt makas oyunu....
+Bilgisayardan rastle(random class kullanılarak) 1-2-3 1=TAŞ, 2=KAĞIT, 3=MAKAS arasında bir sayı alıp kullanıcının
+seçimini  kullanarak 3 puan alanın kazan oldugu code create ediniz .
 
-//		List <String> elemanlar = new ArrayList<>();
-//		elemanlar.add("Tas");
-//		elemanlar.add("Makas");
-//		elemanlar.add("Kagit");
-        Scanner scan = new Scanner(System.in);
+*/
+        System.out.println("****** TAŞ-KAĞIT-MAKAS oyunumuza hoş geldiniz *****");
 
-        while (numberOfFirstWin < gameOver && numberOfComWin < gameOver) {
-            System.out.println("1. Oynucu Secimi: \nTas secmek icin 0 \n Makas secmek icin 1 \n Kagit secmek icin 2 \n seciniz.");
-            int myGuess = scan.nextInt();
-            System.out.println("2. Oynucu Secimi: \nTas secmek icin 0 \n Makas secmek icin 1 \n Kagit secmek icin 2 \n seciniz.");
+        int puanOyuncu = 0;
+        int puanComputer = 0;
 
-            int yourGuess = scan.nextInt();
-            ;
-            System.out.println("1. Oyuncu Tahmini:" + myGuess + "\n" + "2. Oyuncu Tahmini:" + yourGuess);
+        Scanner input = new Scanner(System.in);
 
-            if (myGuess == yourGuess) {
-                System.out.println("Berabere");
-            } else if ((myGuess == 0 && yourGuess == 1) || (myGuess == 1 && yourGuess == 2) || (myGuess == 2 && yourGuess == 0)) {
-                System.out.println("1. oyuncu Kazandi");
-                numberOfFirstWin++;
-            } else {
-                System.out.println("2. oyuncu Kazandi");
-                numberOfComWin++;
+        Random randomSayi = new Random();
+
+
+        while (puanComputer < 3 && puanOyuncu < 3) {
+
+            System.out.println("lütfen TAŞ icin 1'i \nKAĞIT icin 2'yi \nMAKAS için 3'ü seçiniz. Oyundan çıkmak için 0'ı seçiniz");
+
+            int secimOyuncu = input.nextInt();
+
+            if (secimOyuncu == 0) {
+                break;
             }
 
+            int secimComputer = randomSayi.nextInt(3) + 1;
+
+            System.out.println("Bilgisayarın seçtiği sayı = " + secimComputer);
+
+            if (secimOyuncu == secimComputer) {
+
+                System.out.println("Berabere!");
+
+            } else if ((secimOyuncu == 1 && secimComputer == 3) || (secimOyuncu == 2 && secimComputer == 1) || (secimOyuncu == 3 && secimComputer == 2)) {
+
+                System.out.println("Kazandınız!");
+                puanOyuncu++;
+            } else {
+                System.out.println("Kaybettiniz!");
+                puanComputer++;
+            }
+
+            System.out.println("Oyuncunun puanı = " + puanOyuncu);
+            System.out.println("Bilgisayarın puanı = " + puanComputer);
+
+            System.out.println("------------------------");
+
         }
 
-        if (numberOfFirstWin == 3) {
-            System.out.println("==GAME OVER==");
-            System.out.println("Sizin kazandiniz: " + numberOfFirstWin);
-            System.out.println("Kabettiniz Bilgisayarin kazanma sayisi: " + numberOfComWin);
-        } else if (numberOfComWin == 3) {
-            System.out.println("==GAME OVER==");
-            System.out.println("Biligisayar kazandi: " + numberOfComWin);
-            System.out.println("Kaybettiniz Kazandiginiz ouyn sayisi : " + numberOfFirstWin);
+        if (puanOyuncu > puanComputer) {
+
+            System.out.println("Tebrikler Oyunu KAZANDINIZ!");
+        } else if (puanOyuncu < puanComputer) {
+
+            System.out.println("Oyunu KAYBETTİNİZ!");
+        } else {
+
+            System.out.println("Oyun BERABERE BİTTİ!");
         }
-
-
     }
-
 }

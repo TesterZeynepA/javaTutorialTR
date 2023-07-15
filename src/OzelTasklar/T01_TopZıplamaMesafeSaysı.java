@@ -1,5 +1,7 @@
 package OzelTasklar;
 
+import java.util.Scanner;
+
 public class T01_TopZıplamaMesafeSaysı {
 
    /*
@@ -10,9 +12,26 @@ public class T01_TopZıplamaMesafeSaysı {
 
     */
 
-    public static void main(String[] args) {//yanlis cozum
+    public static void main(String[] args) {
 
+            Scanner input = new Scanner(System.in);
 
+            System.out.print("topun birakildigi ilk yuksekligi  giriniz : ");
 
+            double yukseklik = input.nextDouble();
+
+            double topunToplamYolu=0;
+
+            int yereVurmaSayisi=0;
+
+            do {
+                topunToplamYolu+=yukseklik;// ilk düşüş
+                yukseklik*=0.75;//zıplama yüksekliği
+                topunToplamYolu+=yukseklik*2;// ikinci zıplama
+                yereVurmaSayisi++;
+            }while (yukseklik>=1.0);// zıplama 1 metrenin altına düşünce durur
+
+            System.out.println("Topun toplam yolu = " + topunToplamYolu);
+            System.out.println("Topun toplam yere vurma sayısı = " + yereVurmaSayisi);
+        }
     }
-}

@@ -3,7 +3,6 @@ package Tasks13;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Scanner;
 
 public class Task04 {
     public static void main(String[] args) {
@@ -18,11 +17,15 @@ public class Task04 {
 
         List<String> name = new ArrayList<>(Arrays.asList("Ali","Veli","Ayse","Fatma","Omer"));
 
+        List<String> isim = new ArrayList<>();
+
         for (String w : name) {
 
+            if (!w.contains("a") && !w.contains("A")){
 
+                isim.add(w);
+            }
         }
-
-
+        System.out.println("isim = " + isim);
     }
 }
