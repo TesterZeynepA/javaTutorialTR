@@ -1,5 +1,7 @@
 package tasks20;
 
+import java.util.Scanner;
+
 public class T02_Runner {
     /*
     Task 02 ->
@@ -11,6 +13,20 @@ public class T02_Runner {
     T01_Runner Class obj ile enz 2  aylık elektrik tüketim faturası print eden code create ediniz
 
      */
+
+    public static void main(String[] args) {
+
+        T02_Musteri musteri= new T02_Musteri();
+
+        musteri.getUser();
+
+        System.out.println("musteri.name = " + musteri.name);
+
+        System.out.println("Toplam tüketim = " + musteri.hesap.toplamTuketim);
+        System.out.println("Fatura = " + musteri.hesap.odenecekTutar());
+
+
+    }
 
 
 
