@@ -1,7 +1,7 @@
 package Project4;
 
 
-import static P04_ogrcOgrtYonetimi.Islemler.girisPaneli;
+import static Project4.Islemler.girisPaneli;
 
 public class Runner {
     public static void main(String[] args) {
