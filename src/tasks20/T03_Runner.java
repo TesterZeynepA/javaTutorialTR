@@ -11,6 +11,26 @@ public class T03_Runner {
                        alamayacagı dersleri print eden code create ediniz
 
      */
+    public static void main(String[] args) {
+        T03_Lesson ders1 = new T03_Lesson("matematik",4);
+        T03_Lesson ders2 = new T03_Lesson("fizik",5);
+        T03_Lesson ders3 = new T03_Lesson("türkçe",8);
+        T03_Student ogrenci = new T03_Student("zeynep", 10);
+        ogrenci.dersList.add(ders1);
+        ogrenci.dersList.add(ders2);
+        ogrenci.dersList.add(ders3);
 
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 }
