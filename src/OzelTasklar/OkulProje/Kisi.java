@@ -1,9 +1,10 @@
-package okul_Proje;
+package OzelTasklar.OkulProje;
 //
 public class Kisi {
-    private String adSoyad;
-    private String kimlikNo;
-    private int yas;
+
+  private String adSoyad;
+  private String kimlikNo;
+  private int yas;
 
     public Kisi() {
 
@@ -41,10 +42,8 @@ public class Kisi {
 
     @Override
     public String toString() {
-        return "Kisi{" +
-                "adSoyad='" + adSoyad + '\'' +
-                ", kimlikNo='" + kimlikNo + '\'' +
-                ", yas=" + yas +
-                '}';
+        return  "adSoyad='" + adSoyad + '\'' +
+                ",\t kimlikNo='" + kimlikNo + '\'' +
+                ",\t yas= " + yas;
     }
 }

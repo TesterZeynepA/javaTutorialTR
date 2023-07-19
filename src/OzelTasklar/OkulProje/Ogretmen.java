@@ -1,8 +1,9 @@
 package OzelTasklar.OkulProje;
 
-public class Ogretmen {
-    private String bolum;
-    private String sicilNo;
+public class Ogretmen extends Kisi {
+
+   private String bolum;
+   private String sicilNo;
 
     public Ogretmen(String bolum, String sicilNo) {
         this.bolum = bolum;
@@ -10,7 +11,7 @@ public class Ogretmen {
     }
 
     public Ogretmen(String adSoyad, String kimlikNo, int yas, String bolum, String sicilNo) {
-        super();
+        super(adSoyad, kimlikNo, yas);
         this.bolum = bolum;
         this.sicilNo = sicilNo;
     }
@@ -33,10 +34,8 @@ public class Ogretmen {
 
     @Override
     public String toString() {
-        return "Ogretmen{" +
-                "bolum='" + bolum + '\'' +
-                ", sicilNo='" + sicilNo + '\'' +
-                '}';
+        return super.toString()+
+                " ,\t bolum='" + bolum + '\'' +
+                ",\t sicilNo='" + sicilNo + '\'' ;
     }
 }
-

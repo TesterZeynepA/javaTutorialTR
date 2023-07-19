@@ -13,9 +13,33 @@ public class Q27_AtbashCode {
      */
     public static void main(String[] args) {
 
+        Scanner input = new Scanner(System.in);
+        System.out.println("String bir ifade giriniz");
+        String str = input.next();
 
+        String atbashKod = atbashKodConvert(str);
+        System.out.println(atbashKod);
     }
 
+    public static String atbashKodConvert(String str) {
+        StringBuilder sb = new StringBuilder();
 
+        for (int i = 0; i < str.length(); i++) {
+            char karakter = str.charAt(i);
 
+            if (Character.isLetter(karakter)) {
+                if (Character.isUpperCase(karakter)) {
+                    char kodluKarakter = (char) ('Z' - (karakter - 'A'));
+                    sb.append(kodluKarakter);
+                } else {
+                    char kodluKarakter = (char) ('z' - (karakter - 'a'));
+                    sb.append(kodluKarakter);
+                }
+            } else {
+                sb.append(karakter);
+            }
+        }
+
+        return sb.toString();
+    }
 }

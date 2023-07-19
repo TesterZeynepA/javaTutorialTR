@@ -1,16 +1,16 @@
 package OzelTasklar.OkulProje;
 
-public class Ogrenci {
+public class Ogrenci extends Kisi{
 
-    private String ogrenciNo;
-    private String sinif;
+   private String ogrenciNo;
+   private String sinif;
 
-    public Ogrenci(){
+   public Ogrenci(){
 
-    }
+   }
 
     public Ogrenci(String adSoyad, String kimlikNo, int yas, String ogrenciNo, String sinif) {
-        super();
+        super(adSoyad, kimlikNo, yas);
         this.ogrenciNo = ogrenciNo;
         this.sinif = sinif;
     }
@@ -33,9 +33,9 @@ public class Ogrenci {
 
     @Override
     public String toString() {
-        return "Ogrenci{" +
-                "ogrenciNo='" + ogrenciNo + '\'' +
-                ", sinif='" + sinif + '\'' +
-                '}';
+
+        return super.toString()+
+                " ,\t ogrenciNo='" + ogrenciNo + '\'' +
+                ", \t sinif='" + sinif + '\'' ;
     }
 }
