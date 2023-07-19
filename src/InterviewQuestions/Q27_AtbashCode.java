@@ -16,7 +16,21 @@ public class Q27_AtbashCode {
         Scanner input = new Scanner(System.in);
         System.out.println("String bir ifade giriniz");
         String str = input.next();
+        String alfabe = "abcdefghijklmnopqrstuvwxyz";
+        String atbashAlfabe = "zyxwvutsrqponmlkjihgfedcba";
 
+        //1. yol
+
+        for (int i = 0; i <str.length() ; i++) {//metin karakterleri tekrara alındı
+            for (int j = 0; j < 26; j++) {// str1 ve str2 için index ->j
+                if (str.charAt(i)==alfabe.charAt(j)) {
+                    System.out.print(atbashAlfabe.charAt(j));
+                }
+            }
+        }
+
+        //2.yol
+        System.out.println("***** 2. yol ****");
         String atbashKod = atbashKodConvert(str);
         System.out.println(atbashKod);
     }

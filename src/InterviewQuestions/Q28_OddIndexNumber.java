@@ -18,5 +18,26 @@ public class Q28_OddIndexNumber {
                 System.out.println("str.charAt(i) = " + str.charAt(i));
             }
         }
+
+        //2.yol
+        for (int i = 1; i <str.length(); i+=2) {
+            System.out.print(str.charAt(i));
+        }
+
+        //3.yol
+
+        System.out.println("***** do-while ile çözüm *****");
+
+        int index=1;
+        do {
+
+            System.out.println("str.charAt(index) = " + str.charAt(index));
+            index+=2;
+
+        }while (index<str.length());
+
+
+
+
     }
 }

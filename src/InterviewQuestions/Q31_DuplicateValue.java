@@ -21,6 +21,26 @@ public class Q31_DuplicateValue {
         String str = input.next();
 
         tekrarKarakteriBul(str);
+
+        //2. yol
+
+        char [] arr = str.toCharArray();//metin her bir karakter arr ye atandı
+        ArrayList<Character> output = new ArrayList<Character>();//tekrarlanan elemanların depolanacağı boş list
+        System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = i+1; j <arr.length ; j++) {
+                if (arr[i] ==arr[j] && !output.contains(arr[j])) {
+
+                  //  System.out.println("arr[j] = " + arr[j]);
+                    output.add(arr[j]);
+                }
+            }
+
+        }
+
+        System.out.println("output = " + output);
+
+
     }
 
     public static void tekrarKarakteriBul(String str) {

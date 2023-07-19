@@ -18,6 +18,7 @@ public class Q29_SurviveMonkey {
         boolean maymunYasiyorMu = true;
 
         do {
+
             muzSayisi -= 4;
 
             if (muzSayisi >= 0) {

@@ -49,14 +49,17 @@ public class Q33_CollectionsMethodsTask {
         System.out.println("3 birim sağa kaydırılmış liste: " + sayiList);
 
         // Maksimum sayıyı bulma
+
         int maxNumber = Collections.max(sayiList);
         System.out.println("Listin MAX sayisi: " + maxNumber);
 
         // Minimum sayıyı bulma
+
         int minNumber = Collections.min(sayiList);
         System.out.println("Listin MIN sayisi: " + minNumber);
 
         // maksimum sayı ile minimum sayıyı değiştirme
+
         Collections.replaceAll(sayiList, maxNumber, minNumber);
         System.out.println("Listin max sayisi ile min sayisi değişmiş hali: " + sayiList);
     }

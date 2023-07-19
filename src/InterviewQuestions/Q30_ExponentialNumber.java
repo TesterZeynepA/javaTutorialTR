@@ -19,17 +19,27 @@ public class Q30_ExponentialNumber {
         int taban = input.nextInt();
         int us = input.nextInt();
 
-        int cozum = usHesaplama(taban,us);
-        System.out.println(taban + " sayısının  " + us + " . kuvveti = " + cozum+ " olur.");
-    }
-
-    public static int usHesaplama(int taban, int us) {
         int cozum = 1;
+        //1.yol
 
-        for (int i = 0; i < us; i++) {
+       // for (int i = 0; i < us; i++) {
+       //     cozum *= taban;
+       // }
+       // System.out.println(taban + " sayısının  " + us + " . kuvveti = " + cozum+ " olur.");
+
+        //2.yol
+
+        System.out.println("***** while ile çözüm *****");
+
+        System.out.println("   ***  while loop   ***   ");
+        while (us != 0) {
             cozum *= taban;
+            us--;
         }
-
-        return cozum;
+        System.out.println(cozum);
     }
+
 }
+
+
+
