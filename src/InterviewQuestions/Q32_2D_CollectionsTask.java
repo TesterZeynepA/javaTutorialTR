@@ -1,6 +1,7 @@
 package InterviewQuestions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Q32_2D_CollectionsTask {
     // Create 2D ArrayList which can store String ArrayLists
@@ -13,5 +14,23 @@ public class Q32_2D_CollectionsTask {
 
     public static void main(String[] args) {
 
+            List<List<String>> listDepo = new ArrayList<>();
+
+            List<String> calisanlar = new ArrayList<>(List.of("Zeynep", "Esra", "Azra"));
+            List<String> isverenler = new ArrayList<>(List.of("Haluk", "Elly"));
+            List<String> sirketler = new ArrayList<>(List.of("Clarusway"));
+
+            listDepo.add(calisanlar);
+            listDepo.add(isverenler);
+            listDepo.add(sirketler);
+
+            System.out.println("listDepo = " + listDepo);
+
+            for (List<String> w : listDepo) {
+                for (String x : w) {
+                    System.out.print(x + " ");
+                }
+                System.out.println();
+            }
+        }
     }
-}
