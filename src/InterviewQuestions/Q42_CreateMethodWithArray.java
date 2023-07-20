@@ -1,5 +1,6 @@
 package InterviewQuestions;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Q42_CreateMethodWithArray {
@@ -27,6 +28,51 @@ public class Q42_CreateMethodWithArray {
     */
     public static void main(String[] args) {
 
+        Integer arr[]=new Integer[5];//5 eleman alacak boş array tanımlandı
 
+        Random rnd = new Random();
+
+        for (int i = 0; i <5 ; i++) {
+
+            arr[i] = rnd.nextInt(10);//0-10 random sayılar array e atandı
+        }
+       // System.out.println("Arrays.toString(arr) = " + Arrays.toString(arr));
+
+        printArray(arr);
+        sumArray(arr);
+        maxArray(arr);
+
+
+    }
+
+    private static void maxArray(Integer[] arr) {
+
+        int maxValue= arr[0];
+        for (int avuc : arr) {
+            maxValue = Math.max(maxValue,avuc);
+        }
+        System.out.println("maxValue = " + maxValue);
+    }
+
+    private static void sumArray(Integer[] arr) {
+        int toplam=0;
+        for (int avuc: arr) {
+
+            toplam+=avuc;
+        }
+        System.out.println("toplam = " + toplam);
+
+
+    }
+
+    private static void printArray(Integer[] arr) {
+      // for (int i = 0; i <arr.length; i++) {
+      //     System.out.print(arr[i] + " ");
+      // }
+        for (int avuc : arr) {
+
+            System.out.print(avuc + " ");
+        }
+        System.out.println();    
     }
 }

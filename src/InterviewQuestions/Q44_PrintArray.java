@@ -7,6 +7,16 @@ public class Q44_PrintArray {
 
     public static void main(String[] args) {
 
+        String [] arr = {"zeynep", "serap hanim", "haluk hoca", "aytekin bey"};
+
+        printArr(arr);
+
     }
 
+    private static void printArr(String[] arr) {
+        for (String s : arr) {
+            System.out.println(s+ " ");
+        }
+
+    }
 }
