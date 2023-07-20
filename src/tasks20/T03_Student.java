@@ -4,24 +4,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class T03_Student {
+    String studentname;
 
-    String studentName;
     int maxCredit;
 
-    List<T03_Lesson> dersList = new ArrayList<>();
+    List<T03_Lesson> secilenDersler=new ArrayList<>();
 
-    public int toplamKredi(){
+    public int toplamKredi() {
         int toplamKredi=0;
-        for (T03_Lesson dersler : dersList){
-
-            toplamKredi+=dersler.credit;
+        for (T03_Lesson dersler : secilenDersler) {
+            if (toplamKredi <= maxCredit) {
+                toplamKredi+=dersler.credit;
+            }
         }
         return toplamKredi;
     }
 
-    public T03_Student(String studentName, int maxCredit) {
-        this.studentName = studentName;
+    public T03_Student(String studentname, int maxCredit) {
+        this.studentname = studentname;
         this.maxCredit = maxCredit;
     }
 }
-

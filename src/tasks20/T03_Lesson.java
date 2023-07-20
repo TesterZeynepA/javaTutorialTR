@@ -1,26 +1,28 @@
 package tasks20;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class T03_Lesson {
 
     //fields
 
-    String ders;
+    String name;
     int credit;
 
-    public T03_Lesson() {
-
-    }
-
     public T03_Lesson(String name, int credit) {
-        this.ders = name;
+
+        this.name = name;
         this.credit = credit;
     }
 
     @Override
     public String toString() {
         return "T03_Lesson{" +
-                "ders='" + ders + '\'' +
+                "name='" + name + '\'' +
                 ", credit=" + credit +
                 '}';
     }
+    static List<T03_Lesson> listDersler=new ArrayList<>();
+
 }

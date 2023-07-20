@@ -11,11 +11,9 @@ public class T04_Runner {
     Trick -> Kullanıcıya metodlarla iligli bir menü veriniz.
      */
 
+    public static void main(String[] args) {
 
-
-
-
-
-
-
+        T04_Bisiklet obj = new T04_Bisiklet();
+        obj.islemYap();
+    }
 }
