@@ -19,9 +19,5 @@ public class C08_isEmpty_clear {
         System.out.println("country = " + country);//country = []
 
         System.out.println("country.isEmpty() = " + country.isEmpty());//country.isEmpty() = true
-
-
-
-
     }
 }

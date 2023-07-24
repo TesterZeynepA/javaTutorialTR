@@ -60,6 +60,8 @@ public class C01_ArithmeticException {
         }
         System.out.println("class in en son kodu bakalim konsolda gorcez mi?");
 
+
+
     }
 
 }

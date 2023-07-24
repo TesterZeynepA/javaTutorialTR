@@ -1,8 +1,7 @@
 package ch26_Exceptions;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
+import java.io.*;
+
 
 public class C02_FileInputException01 {
 
@@ -46,8 +45,10 @@ public class C02_FileInputException01 {
 
         }
         System.out.println();
-        System.out.println("fis = " + fis);
+        System.out.println("fis = " + fis);//ref..
 
-
+        BufferedWriter bw=new BufferedWriter(new FileWriter("C:\\Users\\zeyne\\IdeaProjects\\JavaTutorial1\\src\\ExceptionYazmaDosyası"));
+        bw.write("try catch throw");
+        bw.close();
     }
 }

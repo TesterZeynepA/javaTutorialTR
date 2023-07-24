@@ -33,5 +33,82 @@ public class Main {
     userName rent is amountOfRent
      */
 
+    public static void main(String[] args) {
+
+        RentApartments kiralikEv= new RentApartments();
+
+        int toplamKira = RentApartments.apartment(1);
+
+
+        String userName= "Zeynep";
+
+        System.out.println(userName+ " rent is amount of "+ kiralikEv.isBalconyOrNo());
+
+    }
+
 
 }
+class RentApartments {
+    private String name;
+    private int roomCount;
+    private boolean balconyOrNo;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getRoomCount() {
+        return roomCount;
+    }
+
+    public void setRoomCount(int roomCount) {
+        this.roomCount = roomCount;
+    }
+
+    public boolean isBalconyOrNo() {
+        return balconyOrNo;
+    }
+
+    public void setBalconyOrNo(boolean balconyOrNo) {
+
+        this.balconyOrNo = balconyOrNo;
+    }
+
+
+   public static  int apartment(int roomCount){
+        int rent=0;
+        if (roomCount==0){
+            rent=1400;
+        } else if (roomCount== 1) {
+           rent= 1700;
+        } else if (roomCount==2) {
+
+            rent= 2200;
+        } else if (roomCount==3) {
+
+            rent= 2700;
+        }else
+            System.out.println("Yanlış giriş yaptınız lütfen tekrar giriş yapınız");
+
+        return rent;
+    }
+       public static int balcony(int rent){
+
+        boolean balconyOrNo = true;
+
+       if (balconyOrNo){
+
+           rent+=200;
+       }else {
+           System.out.println("There is no balcony in the house");
+       }
+      return rent;
+    }
+
+
+
+   }
