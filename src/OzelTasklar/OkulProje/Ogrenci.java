@@ -2,25 +2,20 @@ package OzelTasklar.OkulProje;
 
 public class Ogrenci extends Kisi{
 
-   private String ogrenciNo;
-   private String sinif;
 
-   public Ogrenci(){
+    private static int tempOgrenciNo = 1000;
+    private final int ogrenciNo;
+    private String sinif;
 
-   }
-
-    public Ogrenci(String adSoyad, String kimlikNo, int yas, String ogrenciNo, String sinif) {
+    public Ogrenci(String adSoyad, String kimlikNo, int yas, String sinif) {
         super(adSoyad, kimlikNo, yas);
-        this.ogrenciNo = ogrenciNo;
+        this.ogrenciNo = tempOgrenciNo;
+        tempOgrenciNo++;
         this.sinif = sinif;
     }
 
-    public String getOgrenciNo() {
+    public int getOgrenciNo() {
         return ogrenciNo;
-    }
-
-    public void setOgrenciNo(String ogrenciNo) {
-        this.ogrenciNo = ogrenciNo;
     }
 
     public String getSinif() {
@@ -31,11 +26,12 @@ public class Ogrenci extends Kisi{
         this.sinif = sinif;
     }
 
+
     @Override
     public String toString() {
 
-        return super.toString()+
+        return super.toString() +
                 " ,\t ogrenciNo='" + ogrenciNo + '\'' +
-                ", \t sinif='" + sinif + '\'' ;
+                ", \t sinif='" + sinif + '\'';
     }
 }

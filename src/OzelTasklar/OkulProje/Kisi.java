@@ -2,9 +2,12 @@ package OzelTasklar.OkulProje;
 //
 public class Kisi {
 
-  private String adSoyad;
-  private String kimlikNo;
-  private int yas;
+
+    private String adSoyad;
+    private String kimlikNo;
+    private int yas;
+
+
 
     public Kisi() {
 
@@ -16,13 +19,16 @@ public class Kisi {
         this.yas = yas;
     }
 
+
     public String getAdSoyad() {
         return adSoyad;
     }
 
     public void setAdSoyad(String adSoyad) {
-        this.adSoyad = adSoyad;
+
+        this.adSoyad = adSoyad.toUpperCase();
     }
+
 
     public String getKimlikNo() {
         return kimlikNo;
@@ -40,9 +46,12 @@ public class Kisi {
         this.yas = yas;
     }
 
+
+
+
     @Override
     public String toString() {
-        return  "adSoyad='" + adSoyad + '\'' +
+        return "adSoyad='" + adSoyad + '\'' +
                 ",\t kimlikNo='" + kimlikNo + '\'' +
                 ",\t yas= " + yas;
     }

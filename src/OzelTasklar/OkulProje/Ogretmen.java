@@ -2,17 +2,15 @@ package OzelTasklar.OkulProje;
 
 public class Ogretmen extends Kisi {
 
-   private String bolum;
-   private String sicilNo;
+    private String bolum;
+    private String sicilNo;
 
-    public Ogretmen(String bolum, String sicilNo) {
-        this.bolum = bolum;
-        this.sicilNo = sicilNo;
+    public Ogretmen() {
     }
 
     public Ogretmen(String adSoyad, String kimlikNo, int yas, String bolum, String sicilNo) {
         super(adSoyad, kimlikNo, yas);
-        this.bolum = bolum;
+        setBolum(bolum);
         this.sicilNo = sicilNo;
     }
 
@@ -21,7 +19,8 @@ public class Ogretmen extends Kisi {
     }
 
     public void setBolum(String bolum) {
-        this.bolum = bolum;
+
+        this.bolum = bolum.toUpperCase();
     }
 
     public String getSicilNo() {

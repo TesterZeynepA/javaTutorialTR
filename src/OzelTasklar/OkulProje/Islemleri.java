@@ -8,22 +8,23 @@ import static OzelTasklar.OkulProje.IslemMethodlari.cikis;
 public class Islemleri {
     static String kisiTuru;
 
-    void anaMenu() {
+
+    static void anaMenu() {
         System.out.println("====================================" +
                 "\nÖĞRENCİ VE ÖĞRETMEN YÖNETİM PANELİ" +
                 "\n\"====================================\"");
         System.out.println("1- ÖĞRENCİ İŞLEMLERİ" + "\n2- ÖĞRETMEN İŞLEMLERİ" + "\nQ- ÇIKIŞ");
-        char anaMenuTercih = new Scanner(System.in).nextLine().toUpperCase().charAt(0);
+        String anaMenuTercih = input.next().toUpperCase();
         switch (anaMenuTercih) {
-            case '1':
+            case "1":
                 kisiTuru = "ÖĞRENCİ";
                 islemlerMenu();
                 break;
-            case '2':
+            case "2":
                 kisiTuru = "ÖĞRETMEN";
                 islemlerMenu();
                 break;
-            case 'Q':
+            case "Q":
                 cikis();
                 break;
             default:
@@ -32,36 +33,34 @@ public class Islemleri {
                 break;
         }
     }
-    void islemlerMenu() {
+
+    static void islemlerMenu() {
 
         System.out.println("***** " + kisiTuru + " İŞLEMLERİ MENÜSÜNE HOŞ GELDİNİZ *****\nEKLEME işlemleri için 1\n" +
                 "ARAMA işlemleri için 2\nLİSTELEME işlemleri için 3\nSİLME işlemleri için 4\nANA MENÜ'ye dönmek için 5\n" +
                 "ÇIKIŞ için Q seçiniz = ");
-
-        char islemlerMenuSecim = new Scanner(System.in).nextLine().charAt(0);
-
+        String islemlerMenuSecim = input.next().toUpperCase();
         switch (islemlerMenuSecim) {
-            case '1':
+            case "1":
                 ekleme();
                 islemlerMenu();
                 break;
-            case '2':
+            case "2":
                 arama();
                 islemlerMenu();
                 break;
-            case '3':
+            case "3":
                 listele();
                 islemlerMenu();
                 break;
-            case '4':
+            case "4":
                 silme();
                 islemlerMenu();
                 break;
-            case '5':
+            case "5":
                 anaMenu();
                 break;
-            case 'q':
-            case 'Q':
+            case "Q":
                 cikis();
                 break;
             default:
@@ -69,6 +68,7 @@ public class Islemleri {
                 islemlerMenu();
                 break;
         }
+
 
     }
 
