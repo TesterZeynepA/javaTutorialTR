@@ -1,5 +1,8 @@
 package task24.task02;
 
+import javax.naming.InvalidNameException;
+import java.util.Scanner;
+
 public class Main {
 
 /* TODO
@@ -34,81 +37,28 @@ public class Main {
      */
 
     public static void main(String[] args) {
+       Scanner input =new Scanner(System.in);
 
-        RentApartments kiralikEv= new RentApartments();
+        String userName= null;
 
-        int toplamKira = RentApartments.apartment(1);
+        while (true) {
+            try {
+                System.out.print("Enter your name: ");
+                userName = input.nextLine();
+                if (!userName.matches("[A-Za-z\\s]+")) throw new InvalidNameException();
+                else break;
+            } catch (InvalidNameException e) {
+                System.out.println("İsim sadece harflerden oluşur.");
+            }
+        }
 
+        System.out.println("Which apartment do you want (0 room,1 room,2 rooms,3 rooms): ");
+        int room= input.nextInt();
+        System.out.println("Would you like to have a balcony in your apartment?\nYes-->(Y)\t****No-->(N)");
+        boolean balconyOrNo= input.next().toUpperCase().charAt(0) == 'Y';
 
-        String userName= "Zeynep";
-
-        System.out.println(userName+ " rent is amount of "+ kiralikEv.isBalconyOrNo());
+        rentApartments rentApartments=new rentApartments(userName, room,balconyOrNo);
+        System.out.println(rentApartments);
 
     }
-
-
 }
-class RentApartments {
-    private String name;
-    private int roomCount;
-    private boolean balconyOrNo;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getRoomCount() {
-        return roomCount;
-    }
-
-    public void setRoomCount(int roomCount) {
-        this.roomCount = roomCount;
-    }
-
-    public boolean isBalconyOrNo() {
-        return balconyOrNo;
-    }
-
-    public void setBalconyOrNo(boolean balconyOrNo) {
-
-        this.balconyOrNo = balconyOrNo;
-    }
-
-
-   public static  int apartment(int roomCount){
-        int rent=0;
-        if (roomCount==0){
-            rent=1400;
-        } else if (roomCount== 1) {
-           rent= 1700;
-        } else if (roomCount==2) {
-
-            rent= 2200;
-        } else if (roomCount==3) {
-
-            rent= 2700;
-        }else
-            System.out.println("Yanlış giriş yaptınız lütfen tekrar giriş yapınız");
-
-        return rent;
-    }
-       public static int balcony(int rent){
-
-        boolean balconyOrNo = true;
-
-       if (balconyOrNo){
-
-           rent+=200;
-       }else {
-           System.out.println("There is no balcony in the house");
-       }
-      return rent;
-    }
-
-
-
-   }
