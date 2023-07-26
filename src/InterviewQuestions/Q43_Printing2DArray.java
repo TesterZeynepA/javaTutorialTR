@@ -8,5 +8,19 @@ public class Q43_Printing2DArray {
 
     public static void main(String[] args) {
 
+
+        String arr [][] = {{"zeynep", "aytekin", "furkan","serap"},{"Qa", "Developer","PM", "Sm"}};
+
+        System.out.println("Arrays.deepToString(arr) = " + Arrays.deepToString(arr));
+
+        for (int i = 0; i < arr.length; i++) {
+            for (int j = 0; j < arr[i].length; j++) {
+
+                System.out.println(arr[i][j]+ ", ");
+
+            }
+
+        }
+
     }
 }
