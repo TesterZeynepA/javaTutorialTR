@@ -9,6 +9,10 @@ public class Banka {
         // 5- withdraw de 5000 inin üzerine Günlük limiti aştınız uyarısı verelim
         // 6- main metodunda  account oluşturarak ihtimalleri deneyiniz.
 
+        Account customerAccount1 = new Account("12345",7000);
+
+
+
 
     }
 }

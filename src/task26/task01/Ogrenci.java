@@ -1,5 +1,7 @@
 package task26.task01;
 
+import java.util.Scanner;
+
 public class Ogrenci {
 
     //  1- fieldları ad, soyad, yas olan bir Ogrenci Class tanımlayınız.
@@ -13,5 +15,38 @@ public class Ogrenci {
     //     bu yaşı geçen bir öğrenci eklenmek istenir ise yerine başka öğrenci isteyiniz.
 
 
+   private String ad;
+    private String soyAd;
+    private int yas;
+
+    public Ogrenci(String ad, String soyAd, int yas) {
+        this.ad = ad;
+        this.soyAd = soyAd;
+        this.yas = yas;
+    }
+
+    public String getAd() {
+        return ad;
+    }
+
+    public void setAd(String ad) {
+        this.ad = ad;
+    }
+
+    public String getSoyAd() {
+        return soyAd;
+    }
+
+    public void setSoyAd(String soyAd) {
+        this.soyAd = soyAd;
+    }
+
+    public int getYas() {
+        return yas;
+    }
+    public void setYas(int yas) {
+        this.yas = yas;
+
+    }
 
 }

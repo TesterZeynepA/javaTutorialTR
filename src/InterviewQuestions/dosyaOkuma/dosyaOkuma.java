@@ -8,44 +8,42 @@ public class dosyaOkuma {
     public static void main(String[] args) throws IOException {
         // Listede kac baslik ve
         // bu basliklar altinda kac urun oldugunu bulalim
+        // listedeki urunleri vebaşlıklarını print ediniz
+        // String  dosyaYolu="src/dosyaOkuma/urunler.txt";
+        //FileInputStream fis =new FileInputStream(dosyaYolu);
+        FileInputStream fis = new FileInputStream("src/dosyaOkuma/urunler.txt");//dosya erişimi fise atandı
 
-        String path="Users/zeyne/IdeaProjects/JavaTutorial1/src/InterviewQuestions/dosyaOkuma/urunler.txt";
-        FileInputStream fis = new FileInputStream(path);
-
-        int kontrol=0;
-        String metin="";
-        while((kontrol=fis.read()) != -1){
-            metin+= (char)kontrol;
-
+        String metin = "";
+        int metinSatırKontrol;
+        // while ((fis.read()) != -1) {//cursor character olmayana kadar tekrar
+        while ((metinSatırKontrol = fis.read()) != -1) {//cursor character olmayana kadar tekrar
+            // metin += (char) fis.read();//text'teki tum characterler metine atandı
+            metin += (char) metinSatırKontrol;//text'teki tum characterler metine atandı
         }
+        String tumUrun[] = metin.split("-");
 
-        int urunSayisi=0;
-        String arr[]=metin.split("-");
+        //System.out.println(Arrays.toString(tumUrun));
+        for (int i = 0; i < tumUrun.length; i++) {
+            System.out.print(tumUrun[i] + "-");
+        }
+        System.out.println("listedeki urun sayısı :" + (tumUrun.length - 1));
 
-        System.out.println("Urun sayisi : " + (arr.length-1));
-
-
-
-
-
-        int baslikSayisi=0;
-        int index=0;
-        for (int i = 0; i <metin.length() ; i++) {
-            char karakter=metin.charAt(i);
-            if(i==0){
-                if (Character.isDigit(karakter)){
-                    baslikSayisi++;
+        int baslıkSayisi = 0;
+        for (int i = 0; i < metin.length(); i++) {
+            if (i == 0) {
+                if (Character.isDigit(metin.charAt(i))) {
+                    baslıkSayisi++;
                 }
-            }else {
-               char oncekiKarakter=metin.charAt(i-1);
-               if (Character.isDigit(karakter) && (!Character.isDigit(oncekiKarakter))){
-                   baslikSayisi++;
-               }
-            }
+            } else {
+                if (Character.isDigit(metin.charAt(i)) && (!Character.isDigit(metin.charAt(i - 1)))) {
+                    baslıkSayisi++;
+                }
 
+            }
         }
 
-        System.out.println("Baslik sayisi : " + baslikSayisi);
+        System.out.println("baslıkSayisi = " + baslıkSayisi);
+
     }
 
 }
