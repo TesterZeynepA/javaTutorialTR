@@ -46,7 +46,7 @@ public class C01_Encapsulation {
                 obj1.getName());  //obj1.getName() = null
 
         C02_Encapsulation obj2 =
-                new C02_Encapsulation(1001,"Rumeysa hanim");
+                new C02_Encapsulation(1001, "Rumeysa hanim");
 
         System.out.println("obj2.getId() = " +
                 obj2.getId());  //obj2.getId() = 1001
@@ -64,14 +64,4 @@ public class C01_Encapsulation {
 
 
     }
-
-
-
-
-
-
-
-
-
-
-}
+    }
