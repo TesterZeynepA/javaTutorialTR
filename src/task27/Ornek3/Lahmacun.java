@@ -1,6 +1,6 @@
 package task27.Ornek3;
 
-public class Lahmacun implements IFood {
+public class Lahmacun extends IFood {
 
     public void dough(){
 

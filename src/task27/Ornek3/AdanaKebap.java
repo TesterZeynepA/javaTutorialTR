@@ -1,6 +1,6 @@
 package task27.Ornek3;
 
-public class AdanaKebap implements IFood {
+public class AdanaKebap extends IFood {
 
     public void marinade() {
 
