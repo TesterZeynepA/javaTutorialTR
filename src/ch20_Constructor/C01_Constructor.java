@@ -13,6 +13,7 @@ public class C01_Constructor {
     //fields
     String str ;//instance variable
     String selam = "hello world";
+    static int yas =33;
 
     //default constructor
 
@@ -21,6 +22,7 @@ public class C01_Constructor {
  //
  //
  //  }
+
 
     public static void main(String[] args) {
 
