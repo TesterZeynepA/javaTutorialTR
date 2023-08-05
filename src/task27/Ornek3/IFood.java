@@ -1,14 +1,18 @@
 package task27.Ornek3;
 
-interface Taste{
-    void doubleUcret();
+interface Food {
+    void taste();
+    double doubleUcret(double ucret);
 }
 
-class IFood implements Taste {
-
+class FoodClass implements Food {
+    @Override
+    public void taste() {
+        System.out.println("Lezzetin yeni adresine Hoşgeldiniz!");
+    }
 
     @Override
-    public void doubleUcret() {
-
+    public double doubleUcret(double ucret) {
+        return ucret * 2;
     }
 }
