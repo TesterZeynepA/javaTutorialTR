@@ -1,7 +1,10 @@
-package ProductStore;
+package ProductStore.ProductStore;
+
+import ProductStore.NoteBook;
 
 import static ProductStore.Brand.printBrands;
 import static ProductStore.DataBase.input;
+
 
 public class Store {
 
@@ -14,7 +17,7 @@ public class Store {
         int secim = input.nextInt();
         switch (secim) {
             case 1:
-                NoteBook obj = new NoteBook();
+                ProductStore.NoteBook obj =new NoteBook();
                 obj.menu();
                 break;
             case 2:

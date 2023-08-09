@@ -1,18 +1,27 @@
-package ProductStore;
+package ProductStore.ProductStore;
+
+import ProductStore.Brand;
 
 public class Product {
 
-    static int id = 0;
+    private int id ;
     private String name ;
     private double price;
     private  double discountRate;
     private int amount;
-    private  Brand brand;
+    private Brand brand;
     private double screenSize;
     private int ram;
     private int memory;
 
-    public Product(String name, double price, double discountRate, int amount, Brand brand, double screenSize, int ram, int memory) {
+    public Product(String name,
+                   double price,
+                   double discountRate,
+                   int amount,
+                   Brand brand,
+                   double screenSize,
+                   int ram,
+                   int memory) {
         this.name = name;
         this.price = price;
         this.discountRate = discountRate;
@@ -21,10 +30,12 @@ public class Product {
         this.screenSize = screenSize;
         this.ram = ram;
         this.memory = memory;
-        id++;
+
     }
 
-    public Product(String name, double price, double discountRate, int amount, double screenSize, int ram, int memory) {
+    public Product(
+            String name, double price, double discountRate,
+            int amount, double screenSize, int ram, int memory) {
         this.name = name;
         this.price = price;
         this.discountRate = discountRate;
@@ -32,14 +43,18 @@ public class Product {
         this.screenSize = screenSize;
         this.ram = ram;
         this.memory = memory;
-        id++;
+
     }
 
     public Product() {
     }
 
-    public static int getId() {
+    public  int getId() {
         return id;
+    }
+
+    public  void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -110,7 +125,7 @@ public class Product {
     public String toString() {
         return "Product{" +
                 "id = "+id+
-                ", name='" + name + '\'' +
+                " name='" + name + '\'' +
                 ", price=" + price +
                 ", discountRate=" + discountRate +
                 ", amount=" + amount +

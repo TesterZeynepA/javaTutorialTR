@@ -1,5 +1,7 @@
 package ProductStore;
 
+import java.util.Scanner;
+
 import static ProductStore.DataBase.input;
 
 public class NoteBook extends ProductAbstract{
@@ -54,10 +56,49 @@ public class NoteBook extends ProductAbstract{
     @Override
     public void addItem() {
 
+        System.out.println("urun ekleme sayfasına hoşgeldiniz");
+        System.out.println("ürün adı giriniz");
+        String name = new Scanner(System.in).nextLine();
+        System.out.println("price giriniz");
+        double price = input.nextDouble();
+
+        System.out.println("urun discountRate giriniz");
+        double discountRate = input.nextDouble();
+
+        System.out.println("urun amount giriniz");
+        int amount = input.nextInt();
+
+        System.out.println("urun için uygun brand i listeden seçiniz");
+        Brand.printBrands();//map deki tum brand leri gösterecek.
+
+        System.out.println("urunun brand id sini listeden giriniz");
+
+        int brandId = input.nextInt();
+        Brand brand = Brand.getBrandById(brandId);
+
+        System.out.println("screen size giriniz");
+        double screenSize = input.nextDouble();
+
+        System.out.println("urun ram giriniz");
+        int ram = input.nextInt();
+
+        System.out.println("urun memory giriniz");
+        int memory = input.nextInt();
+
+        Product notebook = new Product(name, price, discountRate,amount, brand, screenSize, ram, memory);
+
+        DataBase.productList.add(notebook);
+
+        System.out.println("eklenen urun " + notebook.getName());
+        System.out.println("notebook = " + notebook);
+
+
     }
 
     @Override
     public void getProducts() {
+        System.out.println("DataBase.productList = " + DataBase.productList);
+       // DataBase.productList.stream().sorted().forEach(System.out::println);
 
     }
 
