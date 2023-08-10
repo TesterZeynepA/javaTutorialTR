@@ -4,7 +4,7 @@ import ProductStore.DataBase;
 
 import java.util.Map;
 
-public class Brand implements ProductStore.DataBase {
+public class Brand extends ProductStore.Brand implements ProductStore.DataBase {
 
     private String name;
 
@@ -30,7 +30,7 @@ public class Brand implements ProductStore.DataBase {
 
     public static void printBrands() {
         System.out.println(" brand ler mapden geliyor");
-        for (Map.Entry<Long , Brand >  each :mapBrand.entrySet() ) {
+        for (Map.Entry<Long, ProductStore.Brand> each :mapBrand.entrySet() ) {
             System.out.println("key is "+each.getKey()+" " +
                     "brand is "+each.getValue());
             System.out.println("-------------------------------");
@@ -40,7 +40,7 @@ public class Brand implements ProductStore.DataBase {
     public static Brand getBrandById(int brandId) {
         for ( Long   key : mapBrand.keySet()) {
             if (key == brandId){
-                return mapBrand.get(key);
+                return (Brand) mapBrand.get(key);
             }
         }
         return null;

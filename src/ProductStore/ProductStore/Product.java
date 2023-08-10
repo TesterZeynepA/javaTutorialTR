@@ -2,7 +2,7 @@ package ProductStore.ProductStore;
 
 import ProductStore.Brand;
 
-public class Product {
+public class Product extends ProductStore.Product {
 
     private int id ;
     private String name ;
@@ -49,9 +49,9 @@ public class Product {
     public Product() {
     }
 
-    public  int getId() {
-        return id;
-    }
+   // public static int getId() {
+   //     return id;
+  //  }
 
     public  void setId(int id) {
         this.id = id;
