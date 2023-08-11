@@ -37,6 +37,10 @@ reduce işleminde bir önceki hesaplanmış değer ile sıradaki değer bir işl
          System.out.println("\n   *** task 04 ***   ");
          printListElemanMin(sayiList);//
 
+         System.out.println("\n   *** task 05 ***   ");
+
+         System.out.println(printList58BykElMinTek(sayiList));//Optional[61]
+
 
      }//main sonu
 
@@ -107,10 +111,25 @@ private static void printListElemanMin(List<Integer> sayiList) {
 
     System.out.println("4. yol İdentity ref : " + sayiList.stream().reduce(sayiList.get(0), (a, b) -> a < b ? a : b));
 
-
 }
 
 
+    // Task05-> List elemanlarının 58'den buyuk en kucuk tek elemanını print eden code create ediniz...
+    private static Optional <Integer> printList58BykElMinTek(List<Integer> sayiList) {
+
+         return sayiList.
+                 stream().
+                 filter(SeedMethods::tekMi).filter(t->t>58).reduce(SeedMethods::minBul);
+
+
+
+
+
+
+
+
+
+    }
 
 
 

@@ -34,5 +34,9 @@ public static int minBul(int a, int b){
    return a<b ? a:b;
 
 }
+    public static void strYazdir(String a){// seed -> tohum method... hic bir özelliği yoktur...
 
+        System.out.print(a+ " ");//parametredeki int değer bir boşluk ile print edilir
+
+    }
 }
