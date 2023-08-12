@@ -1,9 +1,6 @@
 package Lambda_StreamApi.LambdaTutorial;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class C10_LambdaObject {
@@ -44,17 +41,29 @@ public class C10_LambdaObject {
 
             System.out.println("   task05  ");
 
+            System.out.println(printNotOrtalamaTersSiraIlk3(unv));
+            //[university='Istanbul', bolum='Matematik', ogrncSayisi=622, notOrt=77,
+            // university='Bogazici', bolum='Matematik', ogrncSayisi=571, notOrt=73,
+            // university='Itu', bolum='uçak muh.', ogrncSayisi=333, notOrt=63]
+
             System.out.println("   task06  ");
 
+            System.out.println(printOgrncSayiMin2(unv));
+
             System.out.println("   task07  ");
+            System.out.println(printNotOrt63BykUnvOgrnciSayiToplam(unv));//1193
 
             System.out.println("   task08  ");
+            System.out.println(printOgrncSayi333BykNotOrtOrtalama(unv));//OptionalDouble[67.33333333333333]
 
             System.out.println("   task09  ");
+            System.out.println(printMatBolumSayi(unv));//2
 
             System.out.println("   task10  ");
+            System.out.println(printOgrncByk571UnvMaxNotOrt(unv));//OptionalInt[77]
 
             System.out.println("   task11  ");
+            System.out.println(printOgrncKck1071UnvMinNotOrt(unv));//OptionalInt[55]
 
         }//main sonu
 
@@ -89,22 +98,44 @@ public class C10_LambdaObject {
 
         //task05-> universite'leri notOrt gore  b->k siralayip ilk 3 'unu print eden code create ediniz...
 
+        public static List<C10_University> printNotOrtalamaTersSiraIlk3(List<C10_University> unv){
 
+            return unv.stream().sorted(Comparator.comparing(C10_University::getNotOrt).reversed()).limit(3).collect(Collectors.toList());
+        }
         //task06-> ogrc sayisi en az olan 2. universite'yi  print eden code create ediniz...
 
+    public static List<C10_University> printOgrncSayiMin2(List<C10_University> unv){
 
+        return unv.stream().sorted(Comparator.comparing(C10_University::getOgrncSayisi)).limit(2).skip(1).collect(Collectors.toList());
+    }
         //task07-> notOrt 63 'den buyuk olan universite'lerin ogrc sayilarini toplamini print eden code create ediniz...
+    public static int printNotOrt63BykUnvOgrnciSayiToplam(List<C10_University> unv){
 
-
+         return unv.stream().filter(t->t.getNotOrt()>63).mapToInt(t->t.getOgrncSayisi()).//unv obje akışını parametre girilen unv
+        // obj ögrenci sayisi olarak update edip akışa alır.
+        sum();//akış elemanları toplandı.
+        }
         //task08-> Ogrenci sayisi 333'dan buyuk olan universite'lerin notOrt'larinin ortalamasini print eden code create ediniz...
+    public static OptionalDouble printOgrncSayi333BykNotOrtOrtalama(List<C10_University> unv){
 
-
+            return unv.stream().filter(t->t.getOgrncSayisi()>333).mapToDouble(C10_University::getNotOrt).average();//akış elemanların ortalaması alındı
+    }
         //task09-> "matematik" bolumlerinin sayisini  print eden code create ediniz...
 
+    public static long printMatBolumSayi(List<C10_University> unv) {
 
+        return unv.stream().filter(t->t.getBolum().contains("Mat")).count();
+    }
         //task10-> Ogrenci sayilari 571'dan fazla olan universite'lerin en buyuk notOrt'unu print eden code create ediniz...
 
+    public static OptionalInt printOgrncByk571UnvMaxNotOrt(List<C10_University> unv) {
 
+       return unv.stream().filter(t->t.getOgrncSayisi()>571).mapToInt(t->t.getNotOrt()).max();
+    }
         //task11-> Ogrenci sayilari 1071'dan az olan universite'lerin en kucuk notOrt'unu print eden code create ediniz...
+        public static OptionalInt printOgrncKck1071UnvMinNotOrt(List<C10_University> unv) {
+
+            return unv.stream().filter(t->t.getOgrncSayisi()<1071).mapToInt(t->t.getNotOrt()).min();
+        }
 
     }
