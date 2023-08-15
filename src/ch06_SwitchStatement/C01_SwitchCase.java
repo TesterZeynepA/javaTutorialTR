@@ -10,7 +10,7 @@ public class C01_SwitchCase {
         //ternary sartli islemlerde
         //switch case i de sartli islemlerde kulanilir tek bir fark karsilastirma yapilmaz
         //ornegin kayit icin 1 e bas denilirse bunu if else ile yapilabilir switch durumuna
-        // kayidi alip case e 1 verilipd islem yapilir
+        // kayidi alip case e 1 verilip islem yapilir
 
 
 

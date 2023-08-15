@@ -24,7 +24,7 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
 
     public static void main(String[] args) {
         System.out.println(" JAVA  havayollarina hosgeldiniz \nB C D rotalarindan hangine gitceksiniz");
-        String rota = input.next().toUpperCase();//kullancii kucuk harf girerse bu buyuk hrefe cevrilecek
+        String rota = input.next().toUpperCase();//kullancii kucuk harf girerse bu buyuk harfe cevrilecek
 
         if (rota.equals("B")  || rota.equals("C") || rota.equals("D")) {//once rota kontrolu yapildi
 
@@ -60,7 +60,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
                         System.out.println("******** fiyat hesaplaniyor ********");
                         System.out.println("65 yas ustu C rotasina tek Yon gidis fiyatiniz " + fiyatC * 0.7  +" $");
                     }else System.out.println("yanlis bir secim yaptiniz");//1 veya 2 disinda bir tuslama yaparsa
-
                 }
 
                 else if (rota.equals("D")) {//D rota si icin
@@ -76,7 +75,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
 
                 }
                 else System.out.println("hatali Rota girdin 65 yasindaisiniz ");//65 yasi icin yanlis rota girme ihtimali
-
             }
 
             else if ( yas < 24 && yas >=12 ) {
@@ -93,7 +91,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
                         System.out.println("12 24 yas arasi B rotasina tek yon bilet fiyatiniz "+
                                 fiyatB * 0.9 +   " $" );
                     }else System.out.println("nasil bir rota girdin oyle ");
-
                 }
                 else if (rota.equals("C")){//rota c ise
 
@@ -107,7 +104,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
                         System.out.println("12 24 yas arasi C rotasina tek yon bilet fiyatiniz "+
                                 fiyatC * 0.9 +   " $" );
                     }else System.out.println("yanlis yone gidiyorsun dikkat et ");
-
                 }
                 else if (rota.equals("D")){//rota D ise
 
@@ -124,7 +120,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
 
                 }
                 else System.out.println("yanlis rota 12 - 24 yas arasi yanlis rota tercihi");
-
             }
 
             else if (yas < 12) {
@@ -151,7 +146,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
                         System.out.println("yas 12 den kucuk C rotasina tek yon bilet fiyatiniz " +
                                 fiyatC * 0.5 + " $" ) ;
                     }else System.out.println(" oyle bir yon burasi C yok");
-
                 }
 
                 else if (rota.equals("D")){//D rotasi cin
@@ -167,7 +161,6 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
 
                 }
                 else System.out.println("rota secimin yanlis 12 yasin altindasin"); //yas 12 alti iicn yanlis rota kontrolu
-
             }
 
             else{//24 ve 65 yas arasi yas buraya duser
@@ -207,14 +200,9 @@ bilet gidis donus alinirrsa 20% indirim uygulayan bi app create ediniz
                     }else System.out.println("yon yanlis dikat");
                 }
                 else System.out.println("yas 24 65 arasi icin yanlis rota else");//yas 24 65 icin yanlis rota
-
             }
 
-
         }else System.out.println("yanlis ROOTA girdiniz");// ilk if in else body si
-
-
-
 
     }
 }

@@ -40,7 +40,7 @@ public class C05_startWith_endWith {
 // @gmail.com ile  bitiyorsa "hesabınız onaylandı" aksi durumda "geçerli hesap giriniz
 // print edn code creae ediniz.
 
-//note contains ile yaparsaniz true olur iceren herhangi bir karater girse true olur
+//note contains ile yaparsaniz true olur iceren herhangi bir karakter girse true olur
 //bunu endsWith() ile yapiniz
 
         String mailSonu = "@gmail.com"; // sistemde kayitli olan e mail hesabi

@@ -34,7 +34,6 @@ madam , ada ,iki asa, 121
 
             System.out.println("bu kelime palindrome dur");
 
-
         }else System.out.println("bu kelime palindrome DEGİLDİR");
 
     }

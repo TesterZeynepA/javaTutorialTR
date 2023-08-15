@@ -74,10 +74,6 @@ public static void deleteUser(){
 public static void cikis () {
 
     System.out.println();
-
-
-
 }
-
 
 }

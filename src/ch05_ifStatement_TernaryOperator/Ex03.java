@@ -8,10 +8,10 @@ public class Ex03 {
         /*
 girilen bir yılın artık (LEAP YEAR) subat 29 mu olmasını kontrol eden code create ediniz..
     artık yıl:
-    Kural1: 4 ile bölünemeyen yıllar artık yıl değildir.
-    Kural2: 4 ile bölünüp 100 ile bölünemeyen yıllar artık yıldır.
+    Kural1: 4 ile bölünen yıllar artık yıldır. yil%4==0
+    Kural2: 4 ile bölünüp 100 ile bölünemeyen yıllar artık yıldır.yil%4==0 && yil%100!=0
     Kural3: 4’ün katı olmasına rağmen 100 ile bölünebilen yıllardan sadece
-    400’ün katı olan yıllar artık yıldır.
+    400’ün katı olan yıllar artık yıldır.yil%4==0 && yil%400==0
  */
 
         Scanner input = new Scanner (System.in);

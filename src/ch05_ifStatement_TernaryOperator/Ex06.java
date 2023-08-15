@@ -16,9 +16,10 @@ public class Ex06 {
         Scanner input = new Scanner(System.in);
         System.out.print("Cinsiyetinizi giriniz: (Erkek ise 'E' Kadın ise 'K') ");
         char cinsiyet = input.next().toUpperCase().charAt(0);
+
         System.out.print("Yas giriniz: ");
         int yas = input.nextInt();
-        ;
+
         System.out.print("Prim gununu giriniz: ");
         int prim = input.nextInt();
 
@@ -47,6 +48,8 @@ public class Ex06 {
                 yas = 65 - yas;
                 System.out.println("gerekli yıl = " + yas);
             }
+        }else {
+            System.out.println("Cinsiyet için yanlış giriş yaptınız...");
         }
 
 

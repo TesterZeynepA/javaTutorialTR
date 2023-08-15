@@ -4,7 +4,7 @@ public class C03_nested_forLoop {
     public static void main(String[] args) {
 
         /*
-eger bir döngünün baody'sinde başka  bir döngü bulunuyorsa bu tür döngülere nested-loop->
+eger bir döngünün body'sinde başka  bir döngü bulunuyorsa bu tür döngülere nested-loop->
 içiçe döngü denir
 İç döngü dış döngünün her adımda tekrar çalışır.
 içiçe döngülerde en içteki döngü en önce çalışır..

@@ -11,7 +11,7 @@ public class C03_charAt {
         String city = "Istanbul";
         // city variable inin birinci karakterini bulun yazdirin
         System.out.println("city.charAt(0) = " + city.charAt(0)); // city.charAt(0) = I
-    //city variable inin birinci indexte ki ilimani bulun yazdirin
+    //city variable inin birinci indexte ki elemani bulun yazdirin
         System.out.println("city.charAt(1) = " + city.charAt(1)); //city.charAt(1) =s
         char cityBirinciIndexElemani = city.charAt(1);
         System.out.println("cityBirinciIndexElemani = " + cityBirinciIndexElemani);

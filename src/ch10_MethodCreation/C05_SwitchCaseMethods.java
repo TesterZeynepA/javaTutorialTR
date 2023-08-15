@@ -41,29 +41,7 @@ public class C05_SwitchCaseMethods {// CRUD class daki methodları buradan switc
                 System.out.println("hatali secim yaptınız");
                 menu();
                 break;
-
-
-
-
-
-
-
-
-
-
-
-
         }
-
     }
-
-
-
-
-
-
-
-
-
 
 }

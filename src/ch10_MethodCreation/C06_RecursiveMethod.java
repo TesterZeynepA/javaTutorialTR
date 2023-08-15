@@ -64,8 +64,5 @@ Bazı karmaşık çözülmesi güç problemlerde döngülere göre daha kısa ve
         } else {
             return number * calculateFactorial(number - 1);
 */
-
-
     }
-
 }

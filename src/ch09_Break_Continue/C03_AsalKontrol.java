@@ -62,7 +62,7 @@ public class C03_AsalKontrol {
 }
 Bu kod örneği, kullanıcıdan sürekli olarak tamsayı girişi alır ve girilen sayının asal olup olmadığını kontrol eder.
 Kullanıcı 0 sayısını girene kadar döngü devam eder.
-​
+
 Do-while döngüsü, döngü bloğunu en az bir kez çalıştırır ve ardından döngü koşulunu kontrol eder. Kullanıcının
 0 girmesi durumunda döngü sona erer ve program tamamlanır. Her bir giriş için, girilen sayının geçerlilik kontrolü yapılır
 (0'dan küçük veya eşitse hatalıdır).

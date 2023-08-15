@@ -34,7 +34,7 @@ public class C08_equals_equalsIgnoreCase {
         str2 = "Merhaba"; // str2 nin degeri update edildi yeniden atama yapıldı.
         System.out.println("str1.equals(str2) = " + str1.equals(str2)); //true
 
-    String s1 = "ahmet";//jvm s1 ve s2 yi Strin
+    String s1 = "ahmet";//jvm s1 ve s2 yi String
     String s2 = "ahmet";
         String s3 = new String ("zeynep");
         String s4 = new String ("zeynep");

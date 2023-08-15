@@ -23,7 +23,7 @@ public class Ex05 {
         int carpma = sayi1 * sayi2;
 
         System.out.println("hangi islem sonucunu görmek istersin toplama icin 1 e" +
-                "\n cikarma icin 2 e \n bölme icin 3 e \n carpam icin 4 e bas");
+                "\n cikarma icin 2 e \n bölme icin 3 e \n carpma icin 4 e bas");
 
         int secim =scan.nextInt();
         if (secim ==1) {

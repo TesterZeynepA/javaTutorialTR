@@ -3,7 +3,7 @@ package ch10_MethodCreation;
 public class C04_MethodOverloading {
     /*
 
-               Java'da  methodlarin farkli olup olmadiklarini  icin
+               Java'da  methodlarin farkli olup olmadiklarini  anlamak icin
                     a)Method ismi  b)parametreler kontrol edilir..
 
                Java da ayni isimle birden fazla method olusturulmasına overloading denir.

@@ -18,7 +18,7 @@ public class Ex04 {
 
 
         if (ilkKarakter>= 'A' && ilkKarakter <= 'Z' ||ilkKarakter<= 'a' && ilkKarakter <= 'z') {
-            System.out.println("girdigin ifadenin ilk karakteri harf değildir" + ilkKarakter);
+            System.out.println("girdigin ifadenin ilk karakteri harf değildir " + ilkKarakter);
 
         } else System.out.println("girdigin ifadenin ilk karakteri harftir " + ilkKarakter);
 
